@@ -1,0 +1,5 @@
+python3.9 main.py         cifar100_l2p         --model vit_base_patch16_224         --batch-size 16         --data-path ./local_datasets/         --output_dir ./output_no_sel         --seed 729    > output_no_selection_729
+python3.9 main.py         cifar100_l2p         --model vit_base_patch16_224         --batch-size 16         --data-path ./local_datasets/         --output_dir ./output_no_sel         --seed 615    > output_no_selection_615
+python3.9 main.py         cifar100_l2p         --model vit_base_patch16_224         --batch-size 16         --data-path ./local_datasets/         --output_dir ./output_no_sel         --seed 105    > output_no_selection_105
+python3.9 main.py         cifar100_l2p         --model vit_base_patch16_224         --batch-size 16         --data-path ./local_datasets/         --output_dir ./output_no_sel         --seed 97   > output_no_selection_97
+python3.9 main.py         cifar100_l2p         --model vit_base_patch16_224         --batch-size 16         --data-path ./local_datasets/         --output_dir ./output_no_sel         --seed 8    > output_no_selection_8

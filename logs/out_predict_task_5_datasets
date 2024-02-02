@@ -1,0 +1,15 @@
+['SVHN', 'MNIST', 'CIFAR10', 'NotMNIST', 'FashionMNIST']
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+[1 9 2 3 2 5 9 3 3 1]
+tensor([5, 0, 4, 1, 9, 2, 1, 3, 1, 4])
+Files already downloaded and verified
+Files already downloaded and verified
+[6, 9, 9, 4, 1, 1, 2, 7, 8, 3]
+File F/Q3Jvc3NvdmVyIEJvbGRPYmxpcXVlLnR0Zg==.png is broken
+File A/RGVtb2NyYXRpY2FCb2xkT2xkc3R5bGUgQm9sZC50dGY=.png is broken
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+tensor([9, 0, 0, 3, 0, 2, 7, 2, 5, 5])
+Accuracy 0.6289182544560541

@@ -1,0 +1,30 @@
+/storagenfs/d.arcelli/Prompting-Based-CL-Methods-Experiments/.env/lib/python3.9/site-packages/torchvision/transforms/transforms.py:329: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+/storagenfs/d.arcelli/l2p-pytorch/continual_datasets/dataset_utils.py:335: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:199.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+Namespace(subparser_name='five_datasets_l2p', batch_size=16, epochs=5, model='vit_base_patch16_224', input_size=224, pretrained=True, drop=0.0, drop_path=0.0, opt='adam', opt_eps=1e-08, opt_betas=(0.9, 0.999), clip_grad=1.0, momentum=0.9, weight_decay=0.0, reinit_optimizer=True, sched='constant', lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=5, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, unscale_lr=True, color_jitter=None, aa=None, smoothing=0.1, train_interpolation='bicubic', reprob=0.0, remode='pixel', recount=1, data_path='./local_datasets/', dataset='5-datasets', shuffle=False, output_dir='./output_task_init_only', device='cuda', seed=42, eval=False, num_workers=4, pin_mem=True, world_size=1, dist_url='env://', num_tasks=5, train_mask=True, task_inc=False, prompt_pool=True, size=20, length=10, top_k=4, initializer='uniform', prompt_key=True, prompt_key_init='uniform', use_prompt_mask=False, shared_prompt_pool=False, shared_prompt_key=False, batchwise_prompt=True, embedding_key='cls', predefined_key='', pull_constraint=True, pull_constraint_coeff=0.5, global_pool='token', head_type='prompt', freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], print_freq=10, freeze_head=False, train_type='l2p', eval_task_id=False, frequency_penalization=False, class_incremental=False, init_class_prompts=False, task_incremental=False, init_tasks_prompts=True, prompts_per_task=4, prompts_per_class=1, freeze_keys=False)
+Not using distributed mode
+['SVHN', 'MNIST', 'CIFAR10', 'NotMNIST', 'FashionMNIST']
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+[1 9 2 3 2 5 9 3 3 1]
+tensor([5, 0, 4, 1, 9, 2, 1, 3, 1, 4])
+Files already downloaded and verified
+Files already downloaded and verified
+[6, 9, 9, 4, 1, 1, 2, 7, 8, 3]
+File F/Q3Jvc3NvdmVyIEJvbGRPYmxpcXVlLnR0Zg==.png is broken
+File A/RGVtb2NyYXRpY2FCb2xkT2xkc3R5bGUgQm9sZC50dGY=.png is broken
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+tensor([9, 0, 0, 3, 0, 2, 7, 2, 5, 5])
+Creating original model: vit_base_patch16_224
+Creating model: vit_base_patch16_224
+number of params: 207410
+Start training for 5 epochs
+Traceback (most recent call last):
+  File "/storagenfs/d.arcelli/l2p-pytorch/main.py", line 231, in <module>
+    else:
+  File "/storagenfs/d.arcelli/l2p-pytorch/main.py", line 180, in main
+    task_prompt = task_prompt.repeat(prompt_per_task, 1)
+RuntimeError: expand(torch.cuda.FloatTensor{[4, 768]}, size=[768]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)

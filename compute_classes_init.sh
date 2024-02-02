@@ -1,0 +1,2 @@
+python3.9 compute_class_initialization.py --split train --dataset cifar100 > out_cifar100_class_init
+python3.9 compute_class_initialization.py --split train --dataset 5-datasets > out_5_datasets_class_init

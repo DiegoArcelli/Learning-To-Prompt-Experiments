@@ -1,0 +1,2 @@
+python3.9 compute_task_initialization.py --split train --dataset cifar100 > out_cifar100_task_init
+python3.9 compute_task_initialization.py --split train --dataset 5-datasets > out_5_datasets_task_init

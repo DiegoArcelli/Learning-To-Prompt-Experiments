@@ -1,0 +1,430 @@
+/storagenfs/d.arcelli/Prompting-Based-CL-Methods-Experiments/.env/lib/python3.9/site-packages/torchvision/transforms/transforms.py:329: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+/storagenfs/d.arcelli/l2p-pytorch/continual_datasets/dataset_utils.py:335: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:199.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+Namespace(subparser_name='five_datasets_l2p', batch_size=16, epochs=1, model='vit_base_patch16_224', input_size=224, pretrained=True, drop=0.0, drop_path=0.0, opt='adam', opt_eps=1e-08, opt_betas=(0.9, 0.999), clip_grad=1.0, momentum=0.9, weight_decay=0.0, reinit_optimizer=True, sched='constant', lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=5, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, unscale_lr=True, color_jitter=None, aa=None, smoothing=0.1, train_interpolation='bicubic', reprob=0.0, remode='pixel', recount=1, data_path='./local_datasets/', dataset='5-datasets', shuffle=False, output_dir='./test_dir', device='cuda', seed=42, eval=False, num_workers=4, pin_mem=True, world_size=1, dist_url='env://', num_tasks=5, train_mask=True, task_inc=False, prompt_pool=True, size=20, length=10, top_k=4, initializer='uniform', prompt_key=True, prompt_key_init='uniform', use_prompt_mask=True, shared_prompt_pool=True, shared_prompt_key=True, batchwise_prompt=True, embedding_key='cls', predefined_key='', pull_constraint=True, pull_constraint_coeff=0.5, global_pool='token', head_type='prompt', freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], print_freq=10, freeze_head=False, train_type='l2p', eval_task_id=False, frequency_penalization=False, class_incremental=False, init_class_prompts=False, task_incremental=False, init_tasks_prompts=False, prompts_per_task=4, prompts_per_class=1)
+Not using distributed mode
+['SVHN', 'MNIST', 'CIFAR10', 'NotMNIST', 'FashionMNIST']
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/train_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+Using downloaded and verified file: ./local_datasets/test_32x32.mat
+[1 9 2 3 2 5 9 3 3 1]
+tensor([5, 0, 4, 1, 9, 2, 1, 3, 1, 4])
+Files already downloaded and verified
+Files already downloaded and verified
+[6, 9, 9, 4, 1, 1, 2, 7, 8, 3]
+File F/Q3Jvc3NvdmVyIEJvbGRPYmxpcXVlLnR0Zg==.png is broken
+File A/RGVtb2NyYXRpY2FCb2xkT2xkc3R5bGUgQm9sZC50dGY=.png is broken
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+tensor([9, 0, 0, 3, 0, 2, 7, 2, 5, 5])
+Creating original model: vit_base_patch16_224
+Creating model: vit_base_patch16_224
+number of params: 207410
+Start training for 1 epochs
+Train: Epoch[1/1]  [   0/4579]  eta: 3:00:51  Lr: 0.001875  Loss: 2.3002  Acc@1: 12.5000 (12.5000)  Acc@5: 68.7500 (68.7500)  time: 2.3699  data: 0.5071  max mem: 2497
+Train: Epoch[1/1]  [  10/4579]  eta: 0:42:03  Lr: 0.001875  Loss: 2.1737  Acc@1: 18.7500 (15.9091)  Acc@5: 50.0000 (56.8182)  time: 0.5522  data: 0.0468  max mem: 2500
+Train: Epoch[1/1]  [  20/4579]  eta: 0:35:37  Lr: 0.001875  Loss: 2.4522  Acc@1: 12.5000 (15.1786)  Acc@5: 56.2500 (60.1190)  time: 0.3739  data: 0.0009  max mem: 2500
+Train: Epoch[1/1]  [  30/4579]  eta: 0:33:02  Lr: 0.001875  Loss: 1.9384  Acc@1: 18.7500 (17.9435)  Acc@5: 62.5000 (60.8871)  time: 0.3717  data: 0.0013  max mem: 2500
+Train: Epoch[1/1]  [  40/4579]  eta: 0:32:05  Lr: 0.001875  Loss: 1.9888  Acc@1: 25.0000 (19.3598)  Acc@5: 68.7500 (63.2622)  time: 0.3773  data: 0.0011  max mem: 2500
+Train: Epoch[1/1]  [  50/4579]  eta: 0:31:13  Lr: 0.001875  Loss: 1.8787  Acc@1: 25.0000 (20.5882)  Acc@5: 68.7500 (63.2353)  time: 0.3791  data: 0.0010  max mem: 2500
+Train: Epoch[1/1]  [  60/4579]  eta: 0:30:37  Lr: 0.001875  Loss: 2.1061  Acc@1: 31.2500 (22.3361)  Acc@5: 68.7500 (64.3443)  time: 0.3702  data: 0.0010  max mem: 2500
+Train: Epoch[1/1]  [  70/4579]  eta: 0:30:26  Lr: 0.001875  Loss: 1.9293  Acc@1: 31.2500 (22.8873)  Acc@5: 68.7500 (65.5810)  time: 0.3837  data: 0.0006  max mem: 2500
+Train: Epoch[1/1]  [  80/4579]  eta: 0:30:01  Lr: 0.001875  Loss: 1.7547  Acc@1: 31.2500 (24.4599)  Acc@5: 75.0000 (66.7438)  time: 0.3813  data: 0.0005  max mem: 2500
+Train: Epoch[1/1]  [  90/4579]  eta: 0:29:36  Lr: 0.001875  Loss: 1.8100  Acc@1: 31.2500 (25.0687)  Acc@5: 75.0000 (67.7198)  time: 0.3621  data: 0.0004  max mem: 2500
+Train: Epoch[1/1]  [ 100/4579]  eta: 0:31:58  Lr: 0.001875  Loss: 1.8165  Acc@1: 31.2500 (25.6188)  Acc@5: 75.0000 (68.2550)  time: 0.5421  data: 0.0006  max mem: 2500
+Train: Epoch[1/1]  [ 110/4579]  eta: 0:34:10  Lr: 0.001875  Loss: 1.5818  Acc@1: 31.2500 (26.4640)  Acc@5: 75.0000 (69.0315)  time: 0.7459  data: 0.0006  max mem: 2500
+Train: Epoch[1/1]  [ 120/4579]  eta: 0:36:01  Lr: 0.001875  Loss: 1.6143  Acc@1: 31.2500 (26.5496)  Acc@5: 75.0000 (69.5248)  time: 0.7692  data: 0.0005  max mem: 2500
+Train: Epoch[1/1]  [ 130/4579]  eta: 0:37:38  Lr: 0.001875  Loss: 1.4807  Acc@1: 31.2500 (26.6698)  Acc@5: 75.0000 (69.7996)  time: 0.7781  data: 0.0013  max mem: 2500
+Train: Epoch[1/1]  [ 140/4579]  eta: 0:38:51  Lr: 0.001875  Loss: 1.7109  Acc@1: 25.0000 (26.9947)  Acc@5: 75.0000 (70.2128)  time: 0.7709  data: 0.0012  max mem: 2500
+Train: Epoch[1/1]  [ 150/4579]  eta: 0:39:58  Lr: 0.001875  Loss: 1.2238  Acc@1: 31.2500 (27.2765)  Acc@5: 75.0000 (70.9437)  time: 0.7643  data: 0.0005  max mem: 2500
+Train: Epoch[1/1]  [ 160/4579]  eta: 0:40:59  Lr: 0.001875  Loss: 1.5070  Acc@1: 37.5000 (27.8339)  Acc@5: 81.2500 (71.5450)  time: 0.7769  data: 0.0006  max mem: 2500
+Train: Epoch[1/1]  [ 170/4579]  eta: 0:41:47  Lr: 0.001875  Loss: 1.6403  Acc@1: 31.2500 (28.0702)  Acc@5: 81.2500 (72.0760)  time: 0.7737  data: 0.0009  max mem: 2500
+Train: Epoch[1/1]  [ 180/4579]  eta: 0:42:33  Lr: 0.001875  Loss: 1.3707  Acc@1: 31.2500 (28.5566)  Acc@5: 81.2500 (72.5829)  time: 0.7737  data: 0.0008  max mem: 2500
+Train: Epoch[1/1]  [ 190/4579]  eta: 0:43:14  Lr: 0.001875  Loss: 1.3092  Acc@1: 37.5000 (29.1230)  Acc@5: 81.2500 (73.2330)  time: 0.7836  data: 0.0005  max mem: 2500
+{0: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 1: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 2: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 3: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 4: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 5: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 6: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 7: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 8: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 9: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 10: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 11: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 12: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 13: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 14: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 15: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 16: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 17: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 18: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 19: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}}
+Averaged stats: Lr: 0.001875  Loss: 1.2555  Acc@1: 37.5000 (29.4375)  Acc@5: 81.2500 (73.3438)
+Test: [Task 1]  [   0/1627]  eta: 0:23:25  Loss: 3.2482 (3.2482)  Acc@1: 56.2500 (56.2500)  Acc@5: 75.0000 (75.0000)  time: 0.8639  data: 0.3863  max mem: 2500
+Test: [Task 1]  [  10/1627]  eta: 0:15:00  Loss: 3.2482 (3.2347)  Acc@1: 50.0000 (46.0227)  Acc@5: 68.7500 (71.5909)  time: 0.5572  data: 0.0360  max mem: 2500
+Test: [Task 1]  [  20/1627]  eta: 0:13:58  Loss: 3.2737 (3.2829)  Acc@1: 37.5000 (41.0714)  Acc@5: 68.7500 (69.6429)  time: 0.5045  data: 0.0007  max mem: 2500
+Test: [Task 1]  [  30/1627]  eta: 0:13:36  Loss: 3.2767 (3.2905)  Acc@1: 37.5000 (41.3306)  Acc@5: 68.7500 (68.5484)  time: 0.4859  data: 0.0007  max mem: 2500
+Test: [Task 1]  [  40/1627]  eta: 0:13:38  Loss: 3.3021 (3.2915)  Acc@1: 37.5000 (40.3963)  Acc@5: 68.7500 (68.9024)  time: 0.5090  data: 0.0007  max mem: 2500
+Test: [Task 1]  [  50/1627]  eta: 0:13:22  Loss: 3.2751 (3.2619)  Acc@1: 43.7500 (42.0343)  Acc@5: 75.0000 (69.9755)  time: 0.5053  data: 0.0004  max mem: 2500
+Test: [Task 1]  [  60/1627]  eta: 0:13:17  Loss: 3.2346 (3.2741)  Acc@1: 43.7500 (40.9836)  Acc@5: 75.0000 (70.0820)  time: 0.4955  data: 0.0004  max mem: 2500
+Test: [Task 1]  [  70/1627]  eta: 0:13:06  Loss: 3.2602 (3.2748)  Acc@1: 43.7500 (41.5493)  Acc@5: 75.0000 (70.4225)  time: 0.4946  data: 0.0004  max mem: 2500
+Test: [Task 1]  [  80/1627]  eta: 0:13:00  Loss: 3.2830 (3.2839)  Acc@1: 43.7500 (41.2037)  Acc@5: 68.7500 (70.3704)  time: 0.4917  data: 0.0008  max mem: 2500
+Test: [Task 1]  [  90/1627]  eta: 0:12:57  Loss: 3.2890 (3.2818)  Acc@1: 43.7500 (41.6896)  Acc@5: 75.0000 (70.6044)  time: 0.5094  data: 0.0009  max mem: 2500
+Test: [Task 1]  [ 100/1627]  eta: 0:12:49  Loss: 3.3321 (3.2903)  Acc@1: 43.7500 (41.1510)  Acc@5: 68.7500 (70.1114)  time: 0.5003  data: 0.0006  max mem: 2500
+Test: [Task 1]  [ 110/1627]  eta: 0:12:43  Loss: 3.2961 (3.2861)  Acc@1: 37.5000 (41.5541)  Acc@5: 68.7500 (70.4955)  time: 0.4906  data: 0.0015  max mem: 2500
+Test: [Task 1]  [ 120/1627]  eta: 0:12:40  Loss: 3.2714 (3.2859)  Acc@1: 43.7500 (41.9938)  Acc@5: 68.7500 (70.7128)  time: 0.5074  data: 0.0014  max mem: 2500
+Test: [Task 1]  [ 130/1627]  eta: 0:12:33  Loss: 3.2714 (3.2851)  Acc@1: 43.7500 (42.5573)  Acc@5: 68.7500 (70.8492)  time: 0.5063  data: 0.0004  max mem: 2500
+Test: [Task 1]  [ 140/1627]  eta: 0:12:27  Loss: 3.2701 (3.2883)  Acc@1: 43.7500 (42.3316)  Acc@5: 68.7500 (70.5674)  time: 0.4946  data: 0.0005  max mem: 2500
+Test: [Task 1]  [ 150/1627]  eta: 0:12:16  Loss: 3.2738 (3.2820)  Acc@1: 37.5000 (42.5497)  Acc@5: 75.0000 (70.7781)  time: 0.4679  data: 0.0006  max mem: 2500
+Test: [Task 1]  [ 160/1627]  eta: 0:12:10  Loss: 3.2228 (3.2794)  Acc@1: 43.7500 (42.5078)  Acc@5: 75.0000 (71.1180)  time: 0.4632  data: 0.0006  max mem: 2500
+Test: [Task 1]  [ 170/1627]  eta: 0:12:07  Loss: 3.2009 (3.2771)  Acc@1: 43.7500 (42.5073)  Acc@5: 75.0000 (71.3085)  time: 0.5008  data: 0.0004  max mem: 2500
+Test: [Task 1]  [ 180/1627]  eta: 0:12:02  Loss: 3.3266 (3.2840)  Acc@1: 37.5000 (42.2997)  Acc@5: 68.7500 (71.0635)  time: 0.5063  data: 0.0006  max mem: 2500
+Test: [Task 1]  [ 190/1627]  eta: 0:11:55  Loss: 3.2741 (3.2778)  Acc@1: 43.7500 (42.7029)  Acc@5: 75.0000 (71.3024)  time: 0.4877  data: 0.0006  max mem: 2500
+* Acc@1 42.594 Acc@5 71.188 loss 3.280
+{0: {0: 3200, 1: 3200, 2: 3200, 3: 3200, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}}
+[Average accuracy till task1]	Acc@1: 42.5938	Acc@5: 71.1875	Loss: 3.2800
+Train: Epoch[1/1]  [   0/3750]  eta: 1:10:57  Lr: 0.001875  Loss: 1.9722  Acc@1: 18.7500 (18.7500)  Acc@5: 75.0000 (75.0000)  time: 1.1353  data: 0.3869  max mem: 2500
+Train: Epoch[1/1]  [  10/3750]  eta: 0:50:49  Lr: 0.001875  Loss: 1.9505  Acc@1: 18.7500 (17.0455)  Acc@5: 56.2500 (61.3636)  time: 0.8154  data: 0.0356  max mem: 2502
+Train: Epoch[1/1]  [  20/3750]  eta: 0:49:46  Lr: 0.001875  Loss: 1.5380  Acc@1: 25.0000 (27.0833)  Acc@5: 75.0000 (73.5119)  time: 0.7840  data: 0.0006  max mem: 2502
+Train: Epoch[1/1]  [  30/3750]  eta: 0:50:08  Lr: 0.001875  Loss: 1.4233  Acc@1: 37.5000 (31.2500)  Acc@5: 87.5000 (76.2097)  time: 0.8053  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [  40/3750]  eta: 0:49:23  Lr: 0.001875  Loss: 1.2168  Acc@1: 43.7500 (35.0610)  Acc@5: 87.5000 (79.8780)  time: 0.7970  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [  50/3750]  eta: 0:49:27  Lr: 0.001875  Loss: 1.2578  Acc@1: 43.7500 (37.8676)  Acc@5: 87.5000 (80.5147)  time: 0.7916  data: 0.0005  max mem: 2502
+Train: Epoch[1/1]  [  60/3750]  eta: 0:49:06  Lr: 0.001875  Loss: 1.0941  Acc@1: 50.0000 (40.1639)  Acc@5: 87.5000 (82.0697)  time: 0.7974  data: 0.0004  max mem: 2502
+Train: Epoch[1/1]  [  70/3750]  eta: 0:48:53  Lr: 0.001875  Loss: 0.8476  Acc@1: 56.2500 (42.8697)  Acc@5: 93.7500 (83.4507)  time: 0.7843  data: 0.0015  max mem: 2502
+Train: Epoch[1/1]  [  80/3750]  eta: 0:48:57  Lr: 0.001875  Loss: 0.6641  Acc@1: 62.5000 (44.9846)  Acc@5: 93.7500 (84.2593)  time: 0.8065  data: 0.0027  max mem: 2502
+Train: Epoch[1/1]  [  90/3750]  eta: 0:46:00  Lr: 0.001875  Loss: 0.6931  Acc@1: 56.2500 (46.4286)  Acc@5: 87.5000 (85.0275)  time: 0.6024  data: 0.0017  max mem: 2502
+Train: Epoch[1/1]  [ 100/3750]  eta: 0:45:45  Lr: 0.001875  Loss: 0.5669  Acc@1: 56.2500 (47.7104)  Acc@5: 93.7500 (85.6436)  time: 0.5572  data: 0.0006  max mem: 2502
+Train: Epoch[1/1]  [ 110/3750]  eta: 0:46:01  Lr: 0.001875  Loss: 0.4361  Acc@1: 56.2500 (49.0991)  Acc@5: 87.5000 (85.8671)  time: 0.7780  data: 0.0006  max mem: 2502
+Train: Epoch[1/1]  [ 120/3750]  eta: 0:46:02  Lr: 0.001875  Loss: 0.5927  Acc@1: 68.7500 (50.6198)  Acc@5: 93.7500 (86.5702)  time: 0.8051  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [ 130/3750]  eta: 0:46:01  Lr: 0.001875  Loss: 0.3396  Acc@1: 68.7500 (51.5744)  Acc@5: 93.7500 (86.9275)  time: 0.7864  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [ 140/3750]  eta: 0:46:08  Lr: 0.001875  Loss: 0.1212  Acc@1: 68.7500 (52.5709)  Acc@5: 87.5000 (87.2784)  time: 0.8023  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [ 150/3750]  eta: 0:45:59  Lr: 0.001875  Loss: 0.3646  Acc@1: 62.5000 (53.1871)  Acc@5: 93.7500 (87.6242)  time: 0.7906  data: 0.0005  max mem: 2502
+Train: Epoch[1/1]  [ 160/3750]  eta: 0:45:54  Lr: 0.001875  Loss: 0.2445  Acc@1: 62.5000 (53.7655)  Acc@5: 93.7500 (87.9270)  time: 0.7700  data: 0.0005  max mem: 2502
+Train: Epoch[1/1]  [ 170/3750]  eta: 0:45:50  Lr: 0.001875  Loss: 0.3033  Acc@1: 62.5000 (54.3860)  Acc@5: 93.7500 (88.2675)  time: 0.7827  data: 0.0006  max mem: 2502
+Train: Epoch[1/1]  [ 180/3750]  eta: 0:45:43  Lr: 0.001875  Loss: 0.1690  Acc@1: 62.5000 (55.1796)  Acc@5: 93.7500 (88.5359)  time: 0.7776  data: 0.0007  max mem: 2502
+Train: Epoch[1/1]  [ 190/3750]  eta: 0:45:38  Lr: 0.001875  Loss: 0.2376  Acc@1: 62.5000 (55.6937)  Acc@5: 93.7500 (88.6453)  time: 0.7759  data: 0.0006  max mem: 2502
+{0: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 1: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 2: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 3: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 4: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 5: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 6: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 7: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 8: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 9: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 10: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 11: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 12: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 13: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 14: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 15: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 16: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 17: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 18: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 19: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}}
+Averaged stats: Lr: 0.001875  Loss: 0.0228  Acc@1: 62.5000 (56.2500)  Acc@5: 93.7500 (88.8438)
+Test: [Task 1]  [   0/1627]  eta: 0:24:14  Loss: 3.4221 (3.4221)  Acc@1: 18.7500 (18.7500)  Acc@5: 50.0000 (50.0000)  time: 0.8941  data: 0.4151  max mem: 2502
+Test: [Task 1]  [  10/1627]  eta: 0:13:47  Loss: 3.3595 (3.3017)  Acc@1: 25.0000 (27.2727)  Acc@5: 62.5000 (65.9091)  time: 0.5118  data: 0.0381  max mem: 2502
+Test: [Task 1]  [  20/1627]  eta: 0:13:28  Loss: 3.3595 (3.3352)  Acc@1: 25.0000 (26.1905)  Acc@5: 68.7500 (65.4762)  time: 0.4834  data: 0.0004  max mem: 2502
+Test: [Task 1]  [  30/1627]  eta: 0:13:12  Loss: 3.3870 (3.3421)  Acc@1: 25.0000 (26.6129)  Acc@5: 62.5000 (64.5161)  time: 0.4882  data: 0.0012  max mem: 2502
+Test: [Task 1]  [  40/1627]  eta: 0:13:01  Loss: 3.3533 (3.3415)  Acc@1: 25.0000 (25.4573)  Acc@5: 62.5000 (64.7866)  time: 0.4818  data: 0.0014  max mem: 2502
+Test: [Task 1]  [  50/1627]  eta: 0:12:54  Loss: 3.2784 (3.3106)  Acc@1: 25.0000 (26.8382)  Acc@5: 68.7500 (66.1765)  time: 0.4832  data: 0.0007  max mem: 2502
+Test: [Task 1]  [  60/1627]  eta: 0:12:46  Loss: 3.2781 (3.3249)  Acc@1: 25.0000 (26.5369)  Acc@5: 62.5000 (65.2664)  time: 0.4827  data: 0.0006  max mem: 2502
+Test: [Task 1]  [  70/1627]  eta: 0:12:42  Loss: 3.2781 (3.3261)  Acc@1: 18.7500 (26.4085)  Acc@5: 62.5000 (65.3169)  time: 0.4858  data: 0.0007  max mem: 2502
+Test: [Task 1]  [  80/1627]  eta: 0:12:35  Loss: 3.2982 (3.3317)  Acc@1: 18.7500 (25.9259)  Acc@5: 62.5000 (65.0463)  time: 0.4848  data: 0.0014  max mem: 2502
+Test: [Task 1]  [  90/1627]  eta: 0:12:29  Loss: 3.3407 (3.3313)  Acc@1: 25.0000 (26.1676)  Acc@5: 62.5000 (64.9725)  time: 0.4814  data: 0.0013  max mem: 2502
+Test: [Task 1]  [ 100/1627]  eta: 0:12:24  Loss: 3.3407 (3.3395)  Acc@1: 25.0000 (25.7426)  Acc@5: 62.5000 (64.4802)  time: 0.4858  data: 0.0004  max mem: 2502
+Test: [Task 1]  [ 110/1627]  eta: 0:12:18  Loss: 3.3408 (3.3384)  Acc@1: 25.0000 (26.1261)  Acc@5: 62.5000 (64.3018)  time: 0.4830  data: 0.0005  max mem: 2502
+Test: [Task 1]  [ 120/1627]  eta: 0:12:14  Loss: 3.3299 (3.3387)  Acc@1: 25.0000 (25.9814)  Acc@5: 62.5000 (64.1012)  time: 0.4855  data: 0.0005  max mem: 2502
+Test: [Task 1]  [ 130/1627]  eta: 0:12:07  Loss: 3.3219 (3.3365)  Acc@1: 25.0000 (26.1450)  Acc@5: 62.5000 (64.1698)  time: 0.4820  data: 0.0014  max mem: 2502
+Test: [Task 1]  [ 140/1627]  eta: 0:12:03  Loss: 3.3374 (3.3386)  Acc@1: 25.0000 (26.2411)  Acc@5: 62.5000 (63.8741)  time: 0.4819  data: 0.0015  max mem: 2502
+Test: [Task 1]  [ 150/1627]  eta: 0:11:52  Loss: 3.3512 (3.3340)  Acc@1: 25.0000 (26.6142)  Acc@5: 62.5000 (63.8659)  time: 0.4551  data: 0.0007  max mem: 2502
+Test: [Task 1]  [ 160/1627]  eta: 0:11:46  Loss: 3.3099 (3.3313)  Acc@1: 25.0000 (26.5140)  Acc@5: 62.5000 (63.9363)  time: 0.4490  data: 0.0005  max mem: 2502
+Test: [Task 1]  [ 170/1627]  eta: 0:11:43  Loss: 3.3255 (3.3314)  Acc@1: 25.0000 (26.2427)  Acc@5: 62.5000 (63.7792)  time: 0.4883  data: 0.0004  max mem: 2502
+Test: [Task 1]  [ 180/1627]  eta: 0:11:37  Loss: 3.3919 (3.3395)  Acc@1: 18.7500 (25.9323)  Acc@5: 56.2500 (63.2942)  time: 0.4855  data: 0.0005  max mem: 2502
+Test: [Task 1]  [ 190/1627]  eta: 0:11:32  Loss: 3.3531 (3.3343)  Acc@1: 25.0000 (26.2435)  Acc@5: 62.5000 (63.4490)  time: 0.4761  data: 0.0005  max mem: 2502
+* Acc@1 26.250 Acc@5 63.406 loss 3.335
+Test: [Task 2]  [  0/625]  eta: 0:08:39  Loss: 1.5591 (1.5591)  Acc@1: 81.2500 (81.2500)  Acc@5: 100.0000 (100.0000)  time: 0.8316  data: 0.3492  max mem: 2502
+Test: [Task 2]  [ 10/625]  eta: 0:05:13  Loss: 1.8644 (1.8559)  Acc@1: 75.0000 (77.8409)  Acc@5: 93.7500 (93.7500)  time: 0.5090  data: 0.0322  max mem: 2502
+Test: [Task 2]  [ 20/625]  eta: 0:05:05  Loss: 1.8408 (1.8001)  Acc@1: 81.2500 (79.7619)  Acc@5: 93.7500 (94.9405)  time: 0.4893  data: 0.0010  max mem: 2502
+Test: [Task 2]  [ 30/625]  eta: 0:04:55  Loss: 1.7246 (1.7967)  Acc@1: 81.2500 (80.2419)  Acc@5: 93.7500 (95.3629)  time: 0.4899  data: 0.0009  max mem: 2502
+Test: [Task 2]  [ 40/625]  eta: 0:04:48  Loss: 1.8179 (1.8268)  Acc@1: 81.2500 (80.4878)  Acc@5: 100.0000 (95.8841)  time: 0.4810  data: 0.0004  max mem: 2502
+Test: [Task 2]  [ 50/625]  eta: 0:04:42  Loss: 1.8736 (1.8368)  Acc@1: 75.0000 (79.0441)  Acc@5: 93.7500 (95.5882)  time: 0.4848  data: 0.0004  max mem: 2502
+Test: [Task 2]  [ 60/625]  eta: 0:04:36  Loss: 1.8506 (1.8528)  Acc@1: 75.0000 (77.8689)  Acc@5: 93.7500 (95.3893)  time: 0.4825  data: 0.0004  max mem: 2502
+Test: [Task 2]  [ 70/625]  eta: 0:04:31  Loss: 1.7818 (1.8396)  Acc@1: 75.0000 (78.0810)  Acc@5: 100.0000 (95.9507)  time: 0.4846  data: 0.0004  max mem: 2502
+Test: [Task 2]  [ 80/625]  eta: 0:04:26  Loss: 1.8286 (1.8482)  Acc@1: 75.0000 (77.5463)  Acc@5: 100.0000 (95.5247)  time: 0.4833  data: 0.0007  max mem: 2502
+Test: [Task 2]  [ 90/625]  eta: 0:04:21  Loss: 1.8914 (1.8539)  Acc@1: 75.0000 (77.6786)  Acc@5: 93.7500 (95.6731)  time: 0.4863  data: 0.0007  max mem: 2502
+Test: [Task 2]  [100/625]  eta: 0:04:16  Loss: 1.8943 (1.8619)  Acc@1: 81.2500 (77.7228)  Acc@5: 93.7500 (95.4208)  time: 0.4879  data: 0.0004  max mem: 2502
+Test: [Task 2]  [110/625]  eta: 0:04:11  Loss: 1.7838 (1.8549)  Acc@1: 81.2500 (78.0405)  Acc@5: 93.7500 (95.4955)  time: 0.4813  data: 0.0005  max mem: 2502
+Test: [Task 2]  [120/625]  eta: 0:04:06  Loss: 1.7553 (1.8480)  Acc@1: 81.2500 (78.3574)  Acc@5: 100.0000 (95.7645)  time: 0.4896  data: 0.0019  max mem: 2502
+Test: [Task 2]  [130/625]  eta: 0:04:01  Loss: 1.8352 (1.8518)  Acc@1: 75.0000 (78.2443)  Acc@5: 100.0000 (95.8015)  time: 0.4893  data: 0.0021  max mem: 2502
+Test: [Task 2]  [140/625]  eta: 0:03:56  Loss: 1.8635 (1.8512)  Acc@1: 75.0000 (78.2358)  Acc@5: 100.0000 (95.9220)  time: 0.4873  data: 0.0007  max mem: 2502
+Test: [Task 2]  [150/625]  eta: 0:03:50  Loss: 1.8831 (1.8533)  Acc@1: 75.0000 (77.8974)  Acc@5: 93.7500 (95.8609)  time: 0.4681  data: 0.0004  max mem: 2502
+Test: [Task 2]  [160/625]  eta: 0:03:45  Loss: 1.8178 (1.8562)  Acc@1: 81.2500 (78.0668)  Acc@5: 93.7500 (95.9627)  time: 0.4639  data: 0.0004  max mem: 2502
+Test: [Task 2]  [170/625]  eta: 0:03:40  Loss: 1.8911 (1.8573)  Acc@1: 75.0000 (77.8874)  Acc@5: 93.7500 (95.8699)  time: 0.4862  data: 0.0011  max mem: 2502
+Test: [Task 2]  [180/625]  eta: 0:03:35  Loss: 1.8911 (1.8608)  Acc@1: 75.0000 (77.7279)  Acc@5: 93.7500 (95.8564)  time: 0.4845  data: 0.0011  max mem: 2502
+Test: [Task 2]  [190/625]  eta: 0:03:31  Loss: 1.9197 (1.8619)  Acc@1: 75.0000 (77.7160)  Acc@5: 93.7500 (95.8770)  time: 0.4897  data: 0.0005  max mem: 2502
+* Acc@1 77.625 Acc@5 95.750 loss 1.870
+{0: {0: 464, 1: 3008, 2: 272, 3: 80, 4: 2800, 5: 3200, 6: 1184, 7: 1792, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}, 1: {0: 0, 1: 0, 2: 0, 3: 0, 4: 3200, 5: 3200, 6: 3200, 7: 3200, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}}
+[Average accuracy till task2]	Acc@1: 51.9375	Acc@5: 79.5781	Loss: 2.6025	Forgetting: 16.3438	Backward: -16.3438
+Train: Epoch[1/1]  [   0/3125]  eta: 1:01:27  Lr: 0.001875  Loss: 1.9508  Acc@1: 18.7500 (18.7500)  Acc@5: 56.2500 (56.2500)  time: 1.1800  data: 0.3861  max mem: 2502
+Train: Epoch[1/1]  [  10/3125]  eta: 0:41:40  Lr: 0.001875  Loss: 1.7674  Acc@1: 37.5000 (35.7955)  Acc@5: 75.0000 (73.2955)  time: 0.8028  data: 0.0357  max mem: 2503
+Train: Epoch[1/1]  [  20/3125]  eta: 0:41:00  Lr: 0.001875  Loss: 1.5891  Acc@1: 43.7500 (41.9643)  Acc@5: 81.2500 (79.1667)  time: 0.7730  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  30/3125]  eta: 0:40:32  Lr: 0.001875  Loss: 1.3103  Acc@1: 56.2500 (48.9919)  Acc@5: 87.5000 (83.4677)  time: 0.7765  data: 0.0005  max mem: 2503
+Train: Epoch[1/1]  [  40/3125]  eta: 0:40:16  Lr: 0.001875  Loss: 1.3968  Acc@1: 62.5000 (53.3537)  Acc@5: 93.7500 (85.2134)  time: 0.7737  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  50/3125]  eta: 0:40:02  Lr: 0.001875  Loss: 0.8927  Acc@1: 68.7500 (55.7598)  Acc@5: 93.7500 (87.1324)  time: 0.7740  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  60/3125]  eta: 0:39:56  Lr: 0.001875  Loss: 1.1894  Acc@1: 68.7500 (58.1967)  Acc@5: 93.7500 (88.4221)  time: 0.7796  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  70/3125]  eta: 0:39:40  Lr: 0.001875  Loss: 0.7379  Acc@1: 62.5000 (58.8908)  Acc@5: 93.7500 (89.2606)  time: 0.7742  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  80/3125]  eta: 0:39:15  Lr: 0.001875  Loss: 0.7918  Acc@1: 62.5000 (59.9537)  Acc@5: 93.7500 (89.8920)  time: 0.7472  data: 0.0008  max mem: 2503
+Train: Epoch[1/1]  [  90/3125]  eta: 0:36:51  Lr: 0.001875  Loss: 0.3668  Acc@1: 68.7500 (61.6758)  Acc@5: 93.7500 (90.3846)  time: 0.5484  data: 0.0009  max mem: 2503
+Train: Epoch[1/1]  [ 100/3125]  eta: 0:36:22  Lr: 0.001875  Loss: 0.4353  Acc@1: 75.0000 (62.9950)  Acc@5: 93.7500 (90.8416)  time: 0.5109  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 110/3125]  eta: 0:36:29  Lr: 0.001875  Loss: 0.4181  Acc@1: 75.0000 (63.7387)  Acc@5: 93.7500 (91.1036)  time: 0.7159  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 120/3125]  eta: 0:36:34  Lr: 0.001875  Loss: 0.6681  Acc@1: 75.0000 (64.5145)  Acc@5: 100.0000 (91.6322)  time: 0.7745  data: 0.0010  max mem: 2503
+Train: Epoch[1/1]  [ 130/3125]  eta: 0:36:35  Lr: 0.001875  Loss: 0.2246  Acc@1: 75.0000 (65.3626)  Acc@5: 100.0000 (92.0802)  time: 0.7709  data: 0.0010  max mem: 2503
+Train: Epoch[1/1]  [ 140/3125]  eta: 0:36:39  Lr: 0.001875  Loss: 0.6183  Acc@1: 75.0000 (65.8245)  Acc@5: 93.7500 (92.2429)  time: 0.7762  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 150/3125]  eta: 0:36:41  Lr: 0.001875  Loss: 0.5882  Acc@1: 75.0000 (66.4735)  Acc@5: 93.7500 (92.4669)  time: 0.7855  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 160/3125]  eta: 0:36:42  Lr: 0.001875  Loss: 0.3712  Acc@1: 75.0000 (66.6537)  Acc@5: 93.7500 (92.6630)  time: 0.7867  data: 0.0012  max mem: 2503
+Train: Epoch[1/1]  [ 170/3125]  eta: 0:36:41  Lr: 0.001875  Loss: -0.1532  Acc@1: 68.7500 (67.0687)  Acc@5: 100.0000 (92.9825)  time: 0.7816  data: 0.0015  max mem: 2503
+Train: Epoch[1/1]  [ 180/3125]  eta: 0:36:40  Lr: 0.001875  Loss: 0.2111  Acc@1: 75.0000 (67.5414)  Acc@5: 100.0000 (93.2666)  time: 0.7825  data: 0.0011  max mem: 2503
+Train: Epoch[1/1]  [ 190/3125]  eta: 0:36:38  Lr: 0.001875  Loss: 0.3352  Acc@1: 68.7500 (67.7683)  Acc@5: 93.7500 (93.2919)  time: 0.7839  data: 0.0016  max mem: 2503
+{0: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 1: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 2: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 3: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 4: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 5: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 6: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 7: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 8: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 9: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 10: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 11: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 12: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 13: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 14: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 15: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 16: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 17: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 18: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 19: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}}
+Averaged stats: Lr: 0.001875  Loss: 0.0826  Acc@1: 68.7500 (67.9688)  Acc@5: 93.7500 (93.3750)
+Test: [Task 1]  [   0/1627]  eta: 0:24:27  Loss: 3.4580 (3.4580)  Acc@1: 18.7500 (18.7500)  Acc@5: 50.0000 (50.0000)  time: 0.9019  data: 0.4164  max mem: 2503
+Test: [Task 1]  [  10/1627]  eta: 0:14:07  Loss: 3.4058 (3.3514)  Acc@1: 25.0000 (24.4318)  Acc@5: 50.0000 (54.5455)  time: 0.5244  data: 0.0382  max mem: 2503
+Test: [Task 1]  [  20/1627]  eta: 0:13:31  Loss: 3.3851 (3.3699)  Acc@1: 25.0000 (24.1071)  Acc@5: 56.2500 (54.4643)  time: 0.4850  data: 0.0007  max mem: 2503
+Test: [Task 1]  [  30/1627]  eta: 0:13:11  Loss: 3.3594 (3.3842)  Acc@1: 18.7500 (22.5806)  Acc@5: 50.0000 (51.8145)  time: 0.4798  data: 0.0006  max mem: 2503
+Test: [Task 1]  [  40/1627]  eta: 0:13:04  Loss: 3.3594 (3.3846)  Acc@1: 12.5000 (21.6463)  Acc@5: 56.2500 (53.0488)  time: 0.4831  data: 0.0006  max mem: 2503
+Test: [Task 1]  [  50/1627]  eta: 0:12:55  Loss: 3.2689 (3.3565)  Acc@1: 18.7500 (22.6716)  Acc@5: 56.2500 (54.4118)  time: 0.4864  data: 0.0008  max mem: 2503
+Test: [Task 1]  [  60/1627]  eta: 0:12:48  Loss: 3.3425 (3.3766)  Acc@1: 25.0000 (22.0287)  Acc@5: 56.2500 (53.7910)  time: 0.4834  data: 0.0010  max mem: 2503
+Test: [Task 1]  [  70/1627]  eta: 0:12:43  Loss: 3.4086 (3.3753)  Acc@1: 18.7500 (22.0951)  Acc@5: 50.0000 (53.6972)  time: 0.4854  data: 0.0018  max mem: 2503
+Test: [Task 1]  [  80/1627]  eta: 0:12:36  Loss: 3.4086 (3.3785)  Acc@1: 18.7500 (21.9136)  Acc@5: 50.0000 (53.0093)  time: 0.4843  data: 0.0013  max mem: 2503
+Test: [Task 1]  [  90/1627]  eta: 0:12:30  Loss: 3.3796 (3.3733)  Acc@1: 18.7500 (22.3901)  Acc@5: 56.2500 (53.7775)  time: 0.4824  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 100/1627]  eta: 0:12:25  Loss: 3.3717 (3.3757)  Acc@1: 25.0000 (22.4010)  Acc@5: 56.2500 (53.7129)  time: 0.4833  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 110/1627]  eta: 0:12:19  Loss: 3.3376 (3.3759)  Acc@1: 25.0000 (22.6914)  Acc@5: 56.2500 (53.8851)  time: 0.4831  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 120/1627]  eta: 0:12:15  Loss: 3.3657 (3.3764)  Acc@1: 25.0000 (22.7273)  Acc@5: 56.2500 (53.6674)  time: 0.4872  data: 0.0010  max mem: 2503
+Test: [Task 1]  [ 130/1627]  eta: 0:12:10  Loss: 3.3820 (3.3748)  Acc@1: 18.7500 (22.7576)  Acc@5: 56.2500 (53.5305)  time: 0.4893  data: 0.0023  max mem: 2503
+Test: [Task 1]  [ 140/1627]  eta: 0:12:04  Loss: 3.3710 (3.3725)  Acc@1: 18.7500 (22.7837)  Acc@5: 50.0000 (53.4574)  time: 0.4817  data: 0.0025  max mem: 2503
+Test: [Task 1]  [ 150/1627]  eta: 0:11:53  Loss: 3.3155 (3.3646)  Acc@1: 25.0000 (23.1374)  Acc@5: 50.0000 (53.5596)  time: 0.4539  data: 0.0012  max mem: 2503
+Test: [Task 1]  [ 160/1627]  eta: 0:11:49  Loss: 3.3006 (3.3624)  Acc@1: 18.7500 (22.9037)  Acc@5: 50.0000 (53.4550)  time: 0.4612  data: 0.0008  max mem: 2503
+Test: [Task 1]  [ 170/1627]  eta: 0:11:44  Loss: 3.3304 (3.3620)  Acc@1: 18.7500 (22.8070)  Acc@5: 56.2500 (53.6915)  time: 0.4865  data: 0.0011  max mem: 2503
+Test: [Task 1]  [ 180/1627]  eta: 0:11:39  Loss: 3.4237 (3.3686)  Acc@1: 18.7500 (22.5138)  Acc@5: 56.2500 (53.4185)  time: 0.4814  data: 0.0015  max mem: 2503
+Test: [Task 1]  [ 190/1627]  eta: 0:11:34  Loss: 3.3997 (3.3636)  Acc@1: 25.0000 (22.8076)  Acc@5: 56.2500 (53.5995)  time: 0.4835  data: 0.0012  max mem: 2503
+* Acc@1 22.688 Acc@5 53.406 loss 3.365
+Test: [Task 2]  [  0/625]  eta: 0:08:48  Loss: 1.5624 (1.5624)  Acc@1: 81.2500 (81.2500)  Acc@5: 100.0000 (100.0000)  time: 0.8459  data: 0.3662  max mem: 2503
+Test: [Task 2]  [ 10/625]  eta: 0:05:19  Loss: 1.8668 (1.8667)  Acc@1: 75.0000 (77.2727)  Acc@5: 93.7500 (93.1818)  time: 0.5201  data: 0.0338  max mem: 2503
+Test: [Task 2]  [ 20/625]  eta: 0:05:05  Loss: 1.8545 (1.8233)  Acc@1: 75.0000 (78.8690)  Acc@5: 93.7500 (94.3452)  time: 0.4880  data: 0.0005  max mem: 2503
+Test: [Task 2]  [ 30/625]  eta: 0:04:57  Loss: 1.7314 (1.8194)  Acc@1: 81.2500 (79.2339)  Acc@5: 93.7500 (94.7581)  time: 0.4882  data: 0.0012  max mem: 2503
+Test: [Task 2]  [ 40/625]  eta: 0:04:50  Loss: 1.8213 (1.8474)  Acc@1: 81.2500 (79.1159)  Acc@5: 93.7500 (95.2744)  time: 0.4873  data: 0.0012  max mem: 2503
+Test: [Task 2]  [ 50/625]  eta: 0:04:44  Loss: 1.8869 (1.8572)  Acc@1: 75.0000 (78.0637)  Acc@5: 93.7500 (94.6078)  time: 0.4869  data: 0.0007  max mem: 2503
+Test: [Task 2]  [ 60/625]  eta: 0:04:38  Loss: 1.8609 (1.8703)  Acc@1: 75.0000 (76.8443)  Acc@5: 93.7500 (94.1598)  time: 0.4862  data: 0.0011  max mem: 2503
+Test: [Task 2]  [ 70/625]  eta: 0:04:33  Loss: 1.8034 (1.8561)  Acc@1: 75.0000 (77.4648)  Acc@5: 93.7500 (94.7183)  time: 0.4890  data: 0.0008  max mem: 2503
+Test: [Task 2]  [ 80/625]  eta: 0:04:28  Loss: 1.8216 (1.8639)  Acc@1: 75.0000 (76.8519)  Acc@5: 93.7500 (94.1358)  time: 0.4882  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 90/625]  eta: 0:04:22  Loss: 1.9001 (1.8693)  Acc@1: 75.0000 (76.8544)  Acc@5: 93.7500 (94.0247)  time: 0.4812  data: 0.0004  max mem: 2503
+Test: [Task 2]  [100/625]  eta: 0:04:17  Loss: 1.9101 (1.8769)  Acc@1: 75.0000 (77.0421)  Acc@5: 93.7500 (93.8119)  time: 0.4845  data: 0.0004  max mem: 2503
+Test: [Task 2]  [110/625]  eta: 0:04:12  Loss: 1.7826 (1.8702)  Acc@1: 75.0000 (77.2523)  Acc@5: 93.7500 (93.8626)  time: 0.4890  data: 0.0011  max mem: 2503
+Test: [Task 2]  [120/625]  eta: 0:04:07  Loss: 1.7546 (1.8628)  Acc@1: 81.2500 (77.5826)  Acc@5: 93.7500 (94.1116)  time: 0.4867  data: 0.0012  max mem: 2503
+Test: [Task 2]  [130/625]  eta: 0:04:02  Loss: 1.8571 (1.8664)  Acc@1: 75.0000 (77.4809)  Acc@5: 93.7500 (94.2271)  time: 0.4828  data: 0.0007  max mem: 2503
+Test: [Task 2]  [140/625]  eta: 0:03:56  Loss: 1.8867 (1.8653)  Acc@1: 75.0000 (77.5266)  Acc@5: 93.7500 (94.4149)  time: 0.4815  data: 0.0006  max mem: 2503
+Test: [Task 2]  [150/625]  eta: 0:03:50  Loss: 1.8867 (1.8679)  Acc@1: 75.0000 (77.0281)  Acc@5: 93.7500 (94.2467)  time: 0.4649  data: 0.0011  max mem: 2503
+Test: [Task 2]  [160/625]  eta: 0:03:45  Loss: 1.8188 (1.8701)  Acc@1: 75.0000 (77.2904)  Acc@5: 93.7500 (94.3711)  time: 0.4626  data: 0.0011  max mem: 2503
+Test: [Task 2]  [170/625]  eta: 0:03:40  Loss: 1.8928 (1.8717)  Acc@1: 81.2500 (77.1930)  Acc@5: 93.7500 (94.1886)  time: 0.4810  data: 0.0005  max mem: 2503
+Test: [Task 2]  [180/625]  eta: 0:03:36  Loss: 1.8929 (1.8751)  Acc@1: 75.0000 (77.0373)  Acc@5: 93.7500 (94.1644)  time: 0.4871  data: 0.0004  max mem: 2503
+Test: [Task 2]  [190/625]  eta: 0:03:31  Loss: 1.9213 (1.8756)  Acc@1: 75.0000 (77.0288)  Acc@5: 93.7500 (94.1427)  time: 0.4874  data: 0.0004  max mem: 2503
+* Acc@1 76.969 Acc@5 94.062 loss 1.883
+Test: [Task 3]  [  0/625]  eta: 0:09:15  Loss: 1.2378 (1.2378)  Acc@1: 93.7500 (93.7500)  Acc@5: 100.0000 (100.0000)  time: 0.8892  data: 0.4181  max mem: 2503
+Test: [Task 3]  [ 10/625]  eta: 0:05:17  Loss: 1.3466 (1.3655)  Acc@1: 93.7500 (90.9091)  Acc@5: 100.0000 (97.1591)  time: 0.5170  data: 0.0384  max mem: 2503
+Test: [Task 3]  [ 20/625]  eta: 0:05:03  Loss: 1.2939 (1.3150)  Acc@1: 93.7500 (92.2619)  Acc@5: 100.0000 (97.3214)  time: 0.4829  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 30/625]  eta: 0:04:54  Loss: 1.2232 (1.2874)  Acc@1: 93.7500 (92.7419)  Acc@5: 100.0000 (98.1855)  time: 0.4823  data: 0.0008  max mem: 2503
+Test: [Task 3]  [ 40/625]  eta: 0:04:47  Loss: 1.1630 (1.2682)  Acc@1: 93.7500 (92.8354)  Acc@5: 100.0000 (98.3232)  time: 0.4801  data: 0.0019  max mem: 2503
+Test: [Task 3]  [ 50/625]  eta: 0:04:41  Loss: 1.2183 (1.2577)  Acc@1: 93.7500 (92.5245)  Acc@5: 100.0000 (98.4069)  time: 0.4825  data: 0.0015  max mem: 2503
+Test: [Task 3]  [ 60/625]  eta: 0:04:36  Loss: 1.2267 (1.2508)  Acc@1: 93.7500 (92.7254)  Acc@5: 100.0000 (98.5656)  time: 0.4840  data: 0.0005  max mem: 2503
+Test: [Task 3]  [ 70/625]  eta: 0:04:31  Loss: 1.1321 (1.2329)  Acc@1: 93.7500 (92.9577)  Acc@5: 100.0000 (98.5915)  time: 0.4874  data: 0.0015  max mem: 2503
+Test: [Task 3]  [ 80/625]  eta: 0:04:26  Loss: 1.1765 (1.2325)  Acc@1: 93.7500 (92.5926)  Acc@5: 100.0000 (98.4568)  time: 0.4880  data: 0.0016  max mem: 2503
+Test: [Task 3]  [ 90/625]  eta: 0:04:21  Loss: 1.1907 (1.2242)  Acc@1: 93.7500 (92.6511)  Acc@5: 100.0000 (98.2830)  time: 0.4884  data: 0.0005  max mem: 2503
+Test: [Task 3]  [100/625]  eta: 0:04:16  Loss: 1.1544 (1.2196)  Acc@1: 93.7500 (92.6361)  Acc@5: 100.0000 (98.3911)  time: 0.4897  data: 0.0006  max mem: 2503
+Test: [Task 3]  [110/625]  eta: 0:04:11  Loss: 1.1544 (1.2136)  Acc@1: 93.7500 (93.0180)  Acc@5: 100.0000 (98.5360)  time: 0.4826  data: 0.0013  max mem: 2503
+Test: [Task 3]  [120/625]  eta: 0:04:06  Loss: 1.1616 (1.2156)  Acc@1: 93.7500 (92.9752)  Acc@5: 100.0000 (98.5021)  time: 0.4855  data: 0.0019  max mem: 2503
+Test: [Task 3]  [130/625]  eta: 0:04:01  Loss: 1.1616 (1.2183)  Acc@1: 93.7500 (92.8912)  Acc@5: 100.0000 (98.5210)  time: 0.4866  data: 0.0012  max mem: 2503
+Test: [Task 3]  [140/625]  eta: 0:03:56  Loss: 1.1932 (1.2233)  Acc@1: 93.7500 (92.6862)  Acc@5: 100.0000 (98.3156)  time: 0.4780  data: 0.0006  max mem: 2503
+Test: [Task 3]  [150/625]  eta: 0:03:49  Loss: 1.2380 (1.2297)  Acc@1: 87.5000 (92.3427)  Acc@5: 93.7500 (98.0546)  time: 0.4560  data: 0.0006  max mem: 2503
+Test: [Task 3]  [160/625]  eta: 0:03:44  Loss: 1.3843 (1.2392)  Acc@1: 87.5000 (92.2748)  Acc@5: 100.0000 (98.0202)  time: 0.4577  data: 0.0009  max mem: 2503
+Test: [Task 3]  [170/625]  eta: 0:03:39  Loss: 1.2029 (1.2364)  Acc@1: 93.7500 (92.2515)  Acc@5: 100.0000 (98.0629)  time: 0.4812  data: 0.0009  max mem: 2503
+Test: [Task 3]  [180/625]  eta: 0:03:35  Loss: 1.2029 (1.2362)  Acc@1: 93.7500 (92.3343)  Acc@5: 100.0000 (97.9972)  time: 0.4892  data: 0.0009  max mem: 2503
+Test: [Task 3]  [190/625]  eta: 0:03:30  Loss: 1.2244 (1.2337)  Acc@1: 93.7500 (92.4411)  Acc@5: 100.0000 (98.0366)  time: 0.4861  data: 0.0009  max mem: 2503
+* Acc@1 92.375 Acc@5 98.031 loss 1.233
+{0: {0: 0, 1: 1952, 2: 64, 3: 0, 4: 0, 5: 2128, 6: 16, 7: 0, 8: 1872, 9: 3200, 10: 1824, 11: 1744, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}, 1: {0: 0, 1: 0, 2: 0, 3: 0, 4: 1776, 5: 3200, 6: 3200, 7: 3200, 8: 0, 9: 624, 10: 752, 11: 48, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}, 2: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 3200, 9: 3200, 10: 3200, 11: 3200, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}}
+[Average accuracy till task3]	Acc@1: 64.0104	Acc@5: 81.8333	Loss: 2.1606	Forgetting: 10.2812	Backward: -10.2812
+Train: Epoch[1/1]  [   0/1142]  eta: 0:22:26  Lr: 0.001875  Loss: 1.3772  Acc@1: 25.0000 (25.0000)  Acc@5: 50.0000 (50.0000)  time: 1.1788  data: 0.4279  max mem: 2503
+Train: Epoch[1/1]  [  10/1142]  eta: 0:15:13  Lr: 0.001875  Loss: 1.1349  Acc@1: 25.0000 (22.7273)  Acc@5: 68.7500 (63.6364)  time: 0.8071  data: 0.0399  max mem: 2503
+Train: Epoch[1/1]  [  20/1142]  eta: 0:14:46  Lr: 0.001875  Loss: 0.9615  Acc@1: 25.0000 (27.9762)  Acc@5: 75.0000 (72.0238)  time: 0.7705  data: 0.0008  max mem: 2503
+Train: Epoch[1/1]  [  30/1142]  eta: 0:14:35  Lr: 0.001875  Loss: 0.9145  Acc@1: 31.2500 (31.6532)  Acc@5: 81.2500 (75.8065)  time: 0.7758  data: 0.0019  max mem: 2503
+Train: Epoch[1/1]  [  40/1142]  eta: 0:14:22  Lr: 0.001875  Loss: 0.7754  Acc@1: 43.7500 (34.4512)  Acc@5: 87.5000 (77.4390)  time: 0.7753  data: 0.0019  max mem: 2503
+Train: Epoch[1/1]  [  50/1142]  eta: 0:14:11  Lr: 0.001875  Loss: 0.7604  Acc@1: 43.7500 (36.8873)  Acc@5: 87.5000 (78.9216)  time: 0.7694  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  60/1142]  eta: 0:14:02  Lr: 0.001875  Loss: 0.4646  Acc@1: 50.0000 (39.1393)  Acc@5: 87.5000 (80.8402)  time: 0.7711  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [  70/1142]  eta: 0:13:52  Lr: 0.001875  Loss: 0.8957  Acc@1: 50.0000 (39.7007)  Acc@5: 87.5000 (82.1303)  time: 0.7692  data: 0.0008  max mem: 2503
+Train: Epoch[1/1]  [  80/1142]  eta: 0:13:45  Lr: 0.001875  Loss: 0.3130  Acc@1: 50.0000 (41.5123)  Acc@5: 87.5000 (83.0247)  time: 0.7723  data: 0.0011  max mem: 2503
+Train: Epoch[1/1]  [  90/1142]  eta: 0:13:04  Lr: 0.001875  Loss: 0.9215  Acc@1: 50.0000 (42.4451)  Acc@5: 93.7500 (83.3791)  time: 0.6360  data: 0.0012  max mem: 2503
+Train: Epoch[1/1]  [ 100/1142]  eta: 0:12:28  Lr: 0.001875  Loss: 0.0027  Acc@1: 50.0000 (43.3787)  Acc@5: 93.7500 (84.0347)  time: 0.4798  data: 0.0009  max mem: 2503
+Train: Epoch[1/1]  [ 110/1142]  eta: 0:12:26  Lr: 0.001875  Loss: 0.1951  Acc@1: 50.0000 (44.2568)  Acc@5: 93.7500 (84.5721)  time: 0.6208  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 120/1142]  eta: 0:12:22  Lr: 0.001875  Loss: 0.3439  Acc@1: 56.2500 (44.8347)  Acc@5: 87.5000 (84.3492)  time: 0.7676  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 130/1142]  eta: 0:12:19  Lr: 0.001875  Loss: 0.4461  Acc@1: 50.0000 (45.4198)  Acc@5: 81.2500 (84.5897)  time: 0.7725  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 140/1142]  eta: 0:12:14  Lr: 0.001875  Loss: 0.0590  Acc@1: 50.0000 (46.1436)  Acc@5: 87.5000 (84.8404)  time: 0.7734  data: 0.0005  max mem: 2503
+Train: Epoch[1/1]  [ 150/1142]  eta: 0:12:10  Lr: 0.001875  Loss: 0.2244  Acc@1: 56.2500 (46.6060)  Acc@5: 87.5000 (85.0993)  time: 0.7688  data: 0.0005  max mem: 2503
+Train: Epoch[1/1]  [ 160/1142]  eta: 0:12:05  Lr: 0.001875  Loss: -0.0860  Acc@1: 56.2500 (47.0885)  Acc@5: 87.5000 (85.2873)  time: 0.7764  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 170/1142]  eta: 0:11:59  Lr: 0.001875  Loss: 0.2987  Acc@1: 56.2500 (47.5512)  Acc@5: 87.5000 (85.6360)  time: 0.7693  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 180/1142]  eta: 0:11:53  Lr: 0.001875  Loss: 0.1828  Acc@1: 56.2500 (47.9972)  Acc@5: 93.7500 (85.7735)  time: 0.7693  data: 0.0005  max mem: 2503
+Train: Epoch[1/1]  [ 190/1142]  eta: 0:11:48  Lr: 0.001875  Loss: -0.0028  Acc@1: 56.2500 (48.5602)  Acc@5: 93.7500 (86.2893)  time: 0.7791  data: 0.0005  max mem: 2503
+{0: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 1: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 2: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 3: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 4: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 5: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 6: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 7: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 8: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 9: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 10: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 11: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 12: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 13: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 14: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 15: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 16: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 17: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 18: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 19: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}}
+Averaged stats: Lr: 0.001875  Loss: 0.0986  Acc@1: 50.0000 (48.5625)  Acc@5: 93.7500 (86.4688)
+Test: [Task 1]  [   0/1627]  eta: 0:14:30  Loss: 3.2207 (3.2207)  Acc@1: 25.0000 (25.0000)  Acc@5: 68.7500 (68.7500)  time: 0.5352  data: 0.3059  max mem: 2503
+Test: [Task 1]  [  10/1627]  eta: 0:07:09  Loss: 3.3028 (3.3248)  Acc@1: 18.7500 (24.4318)  Acc@5: 43.7500 (48.8636)  time: 0.2654  data: 0.0289  max mem: 2503
+Test: [Task 1]  [  20/1627]  eta: 0:06:51  Loss: 3.3820 (3.3526)  Acc@1: 18.7500 (22.9167)  Acc@5: 43.7500 (45.5357)  time: 0.2419  data: 0.0008  max mem: 2503
+Test: [Task 1]  [  30/1627]  eta: 0:06:31  Loss: 3.3932 (3.3692)  Acc@1: 18.7500 (21.5726)  Acc@5: 43.7500 (44.7581)  time: 0.2342  data: 0.0009  max mem: 2503
+Test: [Task 1]  [  40/1627]  eta: 0:06:22  Loss: 3.3852 (3.3716)  Acc@1: 12.5000 (20.4268)  Acc@5: 43.7500 (44.2073)  time: 0.2254  data: 0.0009  max mem: 2503
+Test: [Task 1]  [  50/1627]  eta: 0:06:21  Loss: 3.2850 (3.3457)  Acc@1: 12.5000 (21.3235)  Acc@5: 43.7500 (45.3431)  time: 0.2366  data: 0.0003  max mem: 2503
+Test: [Task 1]  [  60/1627]  eta: 0:06:18  Loss: 3.3464 (3.3654)  Acc@1: 18.7500 (20.4918)  Acc@5: 43.7500 (44.7746)  time: 0.2430  data: 0.0013  max mem: 2503
+Test: [Task 1]  [  70/1627]  eta: 0:06:13  Loss: 3.3500 (3.3643)  Acc@1: 18.7500 (20.8627)  Acc@5: 43.7500 (44.7183)  time: 0.2355  data: 0.0022  max mem: 2503
+Test: [Task 1]  [  80/1627]  eta: 0:06:07  Loss: 3.3563 (3.3672)  Acc@1: 18.7500 (20.6019)  Acc@5: 50.0000 (44.9074)  time: 0.2253  data: 0.0019  max mem: 2503
+Test: [Task 1]  [  90/1627]  eta: 0:06:04  Loss: 3.3887 (3.3637)  Acc@1: 18.7500 (20.9478)  Acc@5: 43.7500 (45.6044)  time: 0.2273  data: 0.0011  max mem: 2503
+Test: [Task 1]  [ 100/1627]  eta: 0:06:02  Loss: 3.3699 (3.3666)  Acc@1: 18.7500 (20.9158)  Acc@5: 43.7500 (45.6064)  time: 0.2356  data: 0.0006  max mem: 2503
+Test: [Task 1]  [ 110/1627]  eta: 0:06:01  Loss: 3.3351 (3.3682)  Acc@1: 25.0000 (21.2275)  Acc@5: 50.0000 (45.3266)  time: 0.2443  data: 0.0005  max mem: 2503
+Test: [Task 1]  [ 120/1627]  eta: 0:05:57  Loss: 3.3569 (3.3672)  Acc@1: 25.0000 (21.3326)  Acc@5: 50.0000 (45.5579)  time: 0.2386  data: 0.0005  max mem: 2503
+Test: [Task 1]  [ 130/1627]  eta: 0:05:54  Loss: 3.3569 (3.3648)  Acc@1: 25.0000 (21.4218)  Acc@5: 50.0000 (45.7061)  time: 0.2260  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 140/1627]  eta: 0:05:51  Loss: 3.3441 (3.3638)  Acc@1: 25.0000 (21.5426)  Acc@5: 50.0000 (45.7890)  time: 0.2315  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 150/1627]  eta: 0:05:50  Loss: 3.3218 (3.3573)  Acc@1: 25.0000 (21.9371)  Acc@5: 50.0000 (46.1921)  time: 0.2403  data: 0.0005  max mem: 2503
+Test: [Task 1]  [ 160/1627]  eta: 0:05:47  Loss: 3.3015 (3.3553)  Acc@1: 18.7500 (21.6227)  Acc@5: 50.0000 (46.2733)  time: 0.2382  data: 0.0009  max mem: 2503
+Test: [Task 1]  [ 170/1627]  eta: 0:05:44  Loss: 3.3432 (3.3554)  Acc@1: 18.7500 (21.5278)  Acc@5: 43.7500 (46.0892)  time: 0.2298  data: 0.0015  max mem: 2503
+Test: [Task 1]  [ 180/1627]  eta: 0:05:41  Loss: 3.4002 (3.3613)  Acc@1: 18.7500 (21.3052)  Acc@5: 43.7500 (46.0981)  time: 0.2298  data: 0.0011  max mem: 2503
+Test: [Task 1]  [ 190/1627]  eta: 0:05:39  Loss: 3.3565 (3.3564)  Acc@1: 25.0000 (21.4005)  Acc@5: 50.0000 (46.3024)  time: 0.2386  data: 0.0008  max mem: 2503
+* Acc@1 21.250 Acc@5 46.062 loss 3.359
+Test: [Task 2]  [  0/625]  eta: 0:05:11  Loss: 1.6928 (1.6928)  Acc@1: 68.7500 (68.7500)  Acc@5: 87.5000 (87.5000)  time: 0.4987  data: 0.2714  max mem: 2503
+Test: [Task 2]  [ 10/625]  eta: 0:02:29  Loss: 1.9318 (1.9338)  Acc@1: 68.7500 (67.0455)  Acc@5: 87.5000 (90.9091)  time: 0.2435  data: 0.0250  max mem: 2503
+Test: [Task 2]  [ 20/625]  eta: 0:02:23  Loss: 1.9073 (1.8845)  Acc@1: 68.7500 (69.3452)  Acc@5: 93.7500 (92.2619)  time: 0.2239  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 30/625]  eta: 0:02:20  Loss: 1.8591 (1.8827)  Acc@1: 68.7500 (70.9677)  Acc@5: 93.7500 (92.3387)  time: 0.2316  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 40/625]  eta: 0:02:19  Loss: 1.9391 (1.9087)  Acc@1: 75.0000 (71.3415)  Acc@5: 93.7500 (92.9878)  time: 0.2401  data: 0.0013  max mem: 2503
+Test: [Task 2]  [ 50/625]  eta: 0:02:16  Loss: 1.9576 (1.9213)  Acc@1: 68.7500 (70.2206)  Acc@5: 93.7500 (92.5245)  time: 0.2415  data: 0.0013  max mem: 2503
+Test: [Task 2]  [ 60/625]  eta: 0:02:13  Loss: 1.9825 (1.9317)  Acc@1: 68.7500 (69.6721)  Acc@5: 87.5000 (92.0082)  time: 0.2290  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 70/625]  eta: 0:02:10  Loss: 1.8761 (1.9188)  Acc@1: 68.7500 (70.1585)  Acc@5: 93.7500 (92.7817)  time: 0.2250  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 80/625]  eta: 0:02:08  Loss: 1.9066 (1.9260)  Acc@1: 68.7500 (70.2932)  Acc@5: 93.7500 (91.9753)  time: 0.2364  data: 0.0006  max mem: 2503
+Test: [Task 2]  [ 90/625]  eta: 0:02:06  Loss: 1.9848 (1.9309)  Acc@1: 68.7500 (70.1236)  Acc@5: 87.5000 (91.9643)  time: 0.2408  data: 0.0007  max mem: 2503
+Test: [Task 2]  [100/625]  eta: 0:02:03  Loss: 1.9848 (1.9364)  Acc@1: 68.7500 (70.4208)  Acc@5: 87.5000 (91.7698)  time: 0.2305  data: 0.0011  max mem: 2503
+Test: [Task 2]  [110/625]  eta: 0:02:00  Loss: 1.8837 (1.9287)  Acc@1: 75.0000 (70.4955)  Acc@5: 93.7500 (91.8919)  time: 0.2269  data: 0.0011  max mem: 2503
+Test: [Task 2]  [120/625]  eta: 0:01:58  Loss: 1.8199 (1.9245)  Acc@1: 68.7500 (70.9194)  Acc@5: 93.7500 (91.9938)  time: 0.2331  data: 0.0004  max mem: 2503
+Test: [Task 2]  [130/625]  eta: 0:01:56  Loss: 1.9491 (1.9288)  Acc@1: 68.7500 (70.9924)  Acc@5: 93.7500 (91.9370)  time: 0.2455  data: 0.0005  max mem: 2503
+Test: [Task 2]  [140/625]  eta: 0:01:54  Loss: 1.9611 (1.9274)  Acc@1: 75.0000 (71.3652)  Acc@5: 93.7500 (92.1543)  time: 0.2410  data: 0.0005  max mem: 2503
+Test: [Task 2]  [150/625]  eta: 0:01:51  Loss: 1.9611 (1.9310)  Acc@1: 68.7500 (71.1507)  Acc@5: 93.7500 (92.0116)  time: 0.2233  data: 0.0005  max mem: 2503
+Test: [Task 2]  [160/625]  eta: 0:01:48  Loss: 1.9278 (1.9334)  Acc@1: 75.0000 (71.3898)  Acc@5: 87.5000 (92.0807)  time: 0.2261  data: 0.0004  max mem: 2503
+Test: [Task 2]  [170/625]  eta: 0:01:46  Loss: 1.9988 (1.9369)  Acc@1: 68.7500 (71.1623)  Acc@5: 87.5000 (91.8129)  time: 0.2331  data: 0.0004  max mem: 2503
+Test: [Task 2]  [180/625]  eta: 0:01:44  Loss: 1.9988 (1.9403)  Acc@1: 68.7500 (70.9599)  Acc@5: 87.5000 (91.8508)  time: 0.2410  data: 0.0012  max mem: 2503
+Test: [Task 2]  [190/625]  eta: 0:01:42  Loss: 1.9770 (1.9427)  Acc@1: 68.7500 (70.8770)  Acc@5: 87.5000 (91.7866)  time: 0.2442  data: 0.0024  max mem: 2503
+* Acc@1 70.781 Acc@5 91.750 loss 1.949
+Test: [Task 3]  [  0/625]  eta: 0:05:20  Loss: 1.2337 (1.2337)  Acc@1: 93.7500 (93.7500)  Acc@5: 100.0000 (100.0000)  time: 0.5132  data: 0.2822  max mem: 2503
+Test: [Task 3]  [ 10/625]  eta: 0:02:37  Loss: 1.3421 (1.3606)  Acc@1: 93.7500 (90.9091)  Acc@5: 100.0000 (97.1591)  time: 0.2562  data: 0.0260  max mem: 2503
+Test: [Task 3]  [ 20/625]  eta: 0:02:31  Loss: 1.2894 (1.3104)  Acc@1: 93.7500 (92.2619)  Acc@5: 100.0000 (97.3214)  time: 0.2369  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 30/625]  eta: 0:02:26  Loss: 1.2203 (1.2829)  Acc@1: 93.7500 (92.7419)  Acc@5: 100.0000 (98.1855)  time: 0.2399  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 40/625]  eta: 0:02:20  Loss: 1.1580 (1.2637)  Acc@1: 93.7500 (92.8354)  Acc@5: 100.0000 (98.0183)  time: 0.2296  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 50/625]  eta: 0:02:16  Loss: 1.2141 (1.2533)  Acc@1: 93.7500 (92.5245)  Acc@5: 100.0000 (98.0392)  time: 0.2266  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 60/625]  eta: 0:02:15  Loss: 1.2214 (1.2463)  Acc@1: 93.7500 (92.7254)  Acc@5: 100.0000 (98.1557)  time: 0.2371  data: 0.0004  max mem: 2503
+Test: [Task 3]  [ 70/625]  eta: 0:02:13  Loss: 1.1269 (1.2284)  Acc@1: 93.7500 (92.8697)  Acc@5: 100.0000 (98.2394)  time: 0.2492  data: 0.0021  max mem: 2503
+Test: [Task 3]  [ 80/625]  eta: 0:02:09  Loss: 1.1742 (1.2282)  Acc@1: 93.7500 (92.5154)  Acc@5: 100.0000 (98.1481)  time: 0.2365  data: 0.0021  max mem: 2503
+Test: [Task 3]  [ 90/625]  eta: 0:02:06  Loss: 1.1875 (1.2200)  Acc@1: 93.7500 (92.5824)  Acc@5: 100.0000 (97.9396)  time: 0.2214  data: 0.0004  max mem: 2503
+Test: [Task 3]  [100/625]  eta: 0:02:04  Loss: 1.1492 (1.2154)  Acc@1: 93.7500 (92.5743)  Acc@5: 100.0000 (98.0198)  time: 0.2293  data: 0.0004  max mem: 2503
+Test: [Task 3]  [110/625]  eta: 0:02:02  Loss: 1.1492 (1.2095)  Acc@1: 93.7500 (92.9617)  Acc@5: 100.0000 (98.1982)  time: 0.2432  data: 0.0004  max mem: 2503
+Test: [Task 3]  [120/625]  eta: 0:02:00  Loss: 1.1558 (1.2115)  Acc@1: 93.7500 (92.9236)  Acc@5: 100.0000 (98.1921)  time: 0.2427  data: 0.0011  max mem: 2503
+Test: [Task 3]  [130/625]  eta: 0:01:57  Loss: 1.1558 (1.2141)  Acc@1: 93.7500 (92.8435)  Acc@5: 100.0000 (98.1870)  time: 0.2289  data: 0.0011  max mem: 2503
+Test: [Task 3]  [140/625]  eta: 0:01:54  Loss: 1.1906 (1.2191)  Acc@1: 93.7500 (92.6418)  Acc@5: 100.0000 (98.0053)  time: 0.2269  data: 0.0004  max mem: 2503
+Test: [Task 3]  [150/625]  eta: 0:01:52  Loss: 1.2327 (1.2256)  Acc@1: 87.5000 (92.3013)  Acc@5: 93.7500 (97.7235)  time: 0.2317  data: 0.0004  max mem: 2503
+Test: [Task 3]  [160/625]  eta: 0:01:49  Loss: 1.3803 (1.2350)  Acc@1: 87.5000 (92.1972)  Acc@5: 93.7500 (97.6708)  time: 0.2370  data: 0.0004  max mem: 2503
+Test: [Task 3]  [170/625]  eta: 0:01:47  Loss: 1.1985 (1.2322)  Acc@1: 93.7500 (92.1784)  Acc@5: 100.0000 (97.7339)  time: 0.2357  data: 0.0005  max mem: 2503
+Test: [Task 3]  [180/625]  eta: 0:01:44  Loss: 1.1985 (1.2320)  Acc@1: 93.7500 (92.2652)  Acc@5: 100.0000 (97.6865)  time: 0.2288  data: 0.0009  max mem: 2503
+Test: [Task 3]  [190/625]  eta: 0:01:42  Loss: 1.2223 (1.2296)  Acc@1: 93.7500 (92.3757)  Acc@5: 100.0000 (97.7094)  time: 0.2305  data: 0.0009  max mem: 2503
+* Acc@1 92.312 Acc@5 97.719 loss 1.229
+Test: [Task 4]  [ 0/29]  eta: 0:00:28  Loss: 2.0757 (2.0757)  Acc@1: 75.0000 (75.0000)  Acc@5: 93.7500 (93.7500)  time: 0.9739  data: 0.7098  max mem: 2503
+Test: [Task 4]  [10/29]  eta: 0:00:05  Loss: 2.3354 (2.3410)  Acc@1: 56.2500 (60.7955)  Acc@5: 81.2500 (76.1364)  time: 0.3057  data: 0.0663  max mem: 2503
+Test: [Task 4]  [20/29]  eta: 0:00:02  Loss: 2.3082 (2.2307)  Acc@1: 68.7500 (64.5833)  Acc@5: 81.2500 (79.1667)  time: 0.2303  data: 0.0012  max mem: 2503
+Test: [Task 4]  [28/29]  eta: 0:00:00  Loss: 2.1591 (2.2109)  Acc@1: 62.5000 (59.9129)  Acc@5: 81.2500 (78.6492)  time: 0.2266  data: 0.0003  max mem: 2503
+Test: [Task 4] Total time: 0:00:07 (0.2602 s / it)
+* Acc@1 59.913 Acc@5 78.649 loss 2.211
+{0: {0: 80, 1: 2448, 2: 160, 3: 0, 4: 0, 5: 2416, 6: 16, 7: 0, 8: 1440, 9: 3200, 10: 576, 11: 1792, 12: 192, 13: 288, 14: 16, 15: 176, 16: 0, 17: 0, 18: 0, 19: 0}, 1: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 3200, 13: 3200, 14: 3200, 15: 3200, 16: 0, 17: 0, 18: 0, 19: 0}, 2: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 3200, 9: 3200, 10: 3200, 11: 3200, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}, 3: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 459, 13: 459, 14: 459, 15: 459, 16: 0, 17: 0, 18: 0, 19: 0}}
+[Average accuracy till task4]	Acc@1: 61.0642	Acc@5: 78.5451	Loss: 2.1871	Forgetting: 9.4167	Backward: -9.4167
+Train: Epoch[1/1]  [   0/3750]  eta: 1:01:58  Lr: 0.001875  Loss: 1.4669  Acc@1: 6.2500 (6.2500)  Acc@5: 50.0000 (50.0000)  time: 0.9917  data: 0.5212  max mem: 2503
+Train: Epoch[1/1]  [  10/3750]  eta: 0:25:56  Lr: 0.001875  Loss: 1.2342  Acc@1: 18.7500 (16.4773)  Acc@5: 68.7500 (67.0455)  time: 0.4161  data: 0.0492  max mem: 2503
+Train: Epoch[1/1]  [  20/3750]  eta: 0:24:37  Lr: 0.001875  Loss: 0.9661  Acc@1: 25.0000 (31.8452)  Acc@5: 81.2500 (79.4643)  time: 0.3662  data: 0.0013  max mem: 2503
+Train: Epoch[1/1]  [  30/3750]  eta: 0:24:23  Lr: 0.001875  Loss: 0.7692  Acc@1: 50.0000 (39.3145)  Acc@5: 93.7500 (83.8710)  time: 0.3810  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  40/3750]  eta: 0:23:50  Lr: 0.001875  Loss: 0.5259  Acc@1: 56.2500 (43.5976)  Acc@5: 93.7500 (86.5854)  time: 0.3748  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  50/3750]  eta: 0:23:51  Lr: 0.001875  Loss: 0.2201  Acc@1: 62.5000 (46.6912)  Acc@5: 93.7500 (87.6225)  time: 0.3767  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  60/3750]  eta: 0:23:47  Lr: 0.001875  Loss: 0.6844  Acc@1: 68.7500 (49.2828)  Acc@5: 93.7500 (89.0369)  time: 0.3889  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [  70/3750]  eta: 0:23:33  Lr: 0.001875  Loss: 0.5712  Acc@1: 68.7500 (51.8486)  Acc@5: 100.0000 (90.0528)  time: 0.3773  data: 0.0008  max mem: 2503
+Train: Epoch[1/1]  [  80/3750]  eta: 0:23:35  Lr: 0.001875  Loss: 0.1884  Acc@1: 62.5000 (53.0093)  Acc@5: 100.0000 (90.9722)  time: 0.3829  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [  90/3750]  eta: 0:23:25  Lr: 0.001875  Loss: 0.3257  Acc@1: 62.5000 (54.6703)  Acc@5: 100.0000 (91.6896)  time: 0.3838  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 100/3750]  eta: 0:23:16  Lr: 0.001875  Loss: 0.2088  Acc@1: 68.7500 (55.7550)  Acc@5: 100.0000 (92.0792)  time: 0.3694  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 110/3750]  eta: 0:23:13  Lr: 0.001875  Loss: 0.0652  Acc@1: 68.7500 (56.9820)  Acc@5: 93.7500 (92.2860)  time: 0.3767  data: 0.0005  max mem: 2503
+Train: Epoch[1/1]  [ 120/3750]  eta: 0:23:01  Lr: 0.001875  Loss: -0.0917  Acc@1: 62.5000 (57.1798)  Acc@5: 93.7500 (92.6136)  time: 0.3701  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 130/3750]  eta: 0:23:00  Lr: 0.001875  Loss: -0.0438  Acc@1: 62.5000 (58.0630)  Acc@5: 100.0000 (92.9389)  time: 0.3727  data: 0.0011  max mem: 2503
+Train: Epoch[1/1]  [ 140/3750]  eta: 0:22:55  Lr: 0.001875  Loss: -0.1785  Acc@1: 62.5000 (58.2004)  Acc@5: 100.0000 (93.2624)  time: 0.3837  data: 0.0013  max mem: 2503
+Train: Epoch[1/1]  [ 150/3750]  eta: 0:22:48  Lr: 0.001875  Loss: -0.1285  Acc@1: 62.5000 (58.6921)  Acc@5: 93.7500 (93.3361)  time: 0.3722  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 160/3750]  eta: 0:22:46  Lr: 0.001875  Loss: -0.1168  Acc@1: 75.0000 (59.3556)  Acc@5: 93.7500 (93.5559)  time: 0.3778  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 170/3750]  eta: 0:22:43  Lr: 0.001875  Loss: -0.0472  Acc@1: 68.7500 (59.6857)  Acc@5: 100.0000 (93.8596)  time: 0.3860  data: 0.0007  max mem: 2503
+Train: Epoch[1/1]  [ 180/3750]  eta: 0:22:37  Lr: 0.001875  Loss: -0.2042  Acc@1: 68.7500 (60.2555)  Acc@5: 100.0000 (94.0953)  time: 0.3768  data: 0.0006  max mem: 2503
+Train: Epoch[1/1]  [ 190/3750]  eta: 0:22:35  Lr: 0.001875  Loss: -0.3624  Acc@1: 68.7500 (60.7984)  Acc@5: 100.0000 (94.2408)  time: 0.3798  data: 0.0005  max mem: 2503
+{0: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 1: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 2: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 3: {0: 3200, 1: 0, 2: 0, 3: 0, 4: 0}, 4: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 5: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 6: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 7: {0: 0, 1: 3200, 2: 0, 3: 0, 4: 0}, 8: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 9: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 10: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 11: {0: 0, 1: 0, 2: 3200, 3: 0, 4: 0}, 12: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 13: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 14: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 15: {0: 0, 1: 0, 2: 0, 3: 3200, 4: 0}, 16: {0: 0, 1: 0, 2: 0, 3: 0, 4: 3200}, 17: {0: 0, 1: 0, 2: 0, 3: 0, 4: 3200}, 18: {0: 0, 1: 0, 2: 0, 3: 0, 4: 3200}, 19: {0: 0, 1: 0, 2: 0, 3: 0, 4: 3200}}
+Averaged stats: Lr: 0.001875  Loss: -0.2641  Acc@1: 68.7500 (61.2500)  Acc@5: 100.0000 (94.3438)
+Test: [Task 1]  [   0/1627]  eta: 0:18:31  Loss: 3.1949 (3.1949)  Acc@1: 18.7500 (18.7500)  Acc@5: 62.5000 (62.5000)  time: 0.6833  data: 0.4418  max mem: 2503
+Test: [Task 1]  [  10/1627]  eta: 0:07:23  Loss: 3.2963 (3.3222)  Acc@1: 18.7500 (23.2955)  Acc@5: 37.5000 (44.8864)  time: 0.2743  data: 0.0405  max mem: 2503
+Test: [Task 1]  [  20/1627]  eta: 0:07:04  Loss: 3.3622 (3.3461)  Acc@1: 18.7500 (21.1310)  Acc@5: 37.5000 (42.2619)  time: 0.2435  data: 0.0004  max mem: 2503
+Test: [Task 1]  [  30/1627]  eta: 0:06:47  Loss: 3.3656 (3.3640)  Acc@1: 18.7500 (20.1613)  Acc@5: 43.7500 (42.5403)  time: 0.2447  data: 0.0006  max mem: 2503
+Test: [Task 1]  [  40/1627]  eta: 0:06:32  Loss: 3.3656 (3.3679)  Acc@1: 12.5000 (19.0549)  Acc@5: 43.7500 (41.6159)  time: 0.2289  data: 0.0012  max mem: 2503
+Test: [Task 1]  [  50/1627]  eta: 0:06:25  Loss: 3.2669 (3.3397)  Acc@1: 18.7500 (19.6078)  Acc@5: 43.7500 (43.1373)  time: 0.2279  data: 0.0011  max mem: 2503
+Test: [Task 1]  [  60/1627]  eta: 0:06:23  Loss: 3.3366 (3.3612)  Acc@1: 18.7500 (18.9549)  Acc@5: 43.7500 (42.0082)  time: 0.2400  data: 0.0013  max mem: 2503
+Test: [Task 1]  [  70/1627]  eta: 0:06:22  Loss: 3.3432 (3.3589)  Acc@1: 18.7500 (19.3662)  Acc@5: 43.7500 (42.5176)  time: 0.2483  data: 0.0021  max mem: 2503
+Test: [Task 1]  [  80/1627]  eta: 0:06:15  Loss: 3.3124 (3.3607)  Acc@1: 18.7500 (19.1358)  Acc@5: 43.7500 (42.2068)  time: 0.2357  data: 0.0020  max mem: 2503
+Test: [Task 1]  [  90/1627]  eta: 0:06:10  Loss: 3.3664 (3.3566)  Acc@1: 18.7500 (19.4368)  Acc@5: 43.7500 (42.8571)  time: 0.2239  data: 0.0011  max mem: 2503
+Test: [Task 1]  [ 100/1627]  eta: 0:06:07  Loss: 3.3652 (3.3592)  Acc@1: 18.7500 (19.3688)  Acc@5: 43.7500 (42.5124)  time: 0.2323  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 110/1627]  eta: 0:06:06  Loss: 3.3168 (3.3601)  Acc@1: 18.7500 (19.7072)  Acc@5: 43.7500 (42.2860)  time: 0.2442  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 120/1627]  eta: 0:06:01  Loss: 3.3498 (3.3590)  Acc@1: 18.7500 (20.0413)  Acc@5: 43.7500 (42.4070)  time: 0.2351  data: 0.0005  max mem: 2503
+Test: [Task 1]  [ 130/1627]  eta: 0:05:57  Loss: 3.3485 (3.3571)  Acc@1: 18.7500 (20.0859)  Acc@5: 43.7500 (42.3664)  time: 0.2228  data: 0.0006  max mem: 2503
+Test: [Task 1]  [ 140/1627]  eta: 0:05:54  Loss: 3.3295 (3.3555)  Acc@1: 18.7500 (20.2128)  Acc@5: 37.5000 (42.2872)  time: 0.2300  data: 0.0005  max mem: 2503
+Test: [Task 1]  [ 150/1627]  eta: 0:05:53  Loss: 3.3157 (3.3481)  Acc@1: 18.7500 (20.5712)  Acc@5: 43.7500 (42.6325)  time: 0.2430  data: 0.0008  max mem: 2503
+Test: [Task 1]  [ 160/1627]  eta: 0:05:50  Loss: 3.2911 (3.3458)  Acc@1: 18.7500 (20.2640)  Acc@5: 43.7500 (42.5466)  time: 0.2452  data: 0.0024  max mem: 2503
+Test: [Task 1]  [ 170/1627]  eta: 0:05:46  Loss: 3.3315 (3.3463)  Acc@1: 18.7500 (20.2485)  Acc@5: 37.5000 (42.3611)  time: 0.2297  data: 0.0020  max mem: 2503
+Test: [Task 1]  [ 180/1627]  eta: 0:05:44  Loss: 3.3895 (3.3519)  Acc@1: 18.7500 (19.8895)  Acc@5: 37.5000 (42.2307)  time: 0.2275  data: 0.0004  max mem: 2503
+Test: [Task 1]  [ 190/1627]  eta: 0:05:42  Loss: 3.3369 (3.3468)  Acc@1: 18.7500 (19.9280)  Acc@5: 43.7500 (42.3429)  time: 0.2386  data: 0.0004  max mem: 2503
+* Acc@1 19.812 Acc@5 42.125 loss 3.348
+Test: [Task 2]  [  0/625]  eta: 0:06:04  Loss: 1.7507 (1.7507)  Acc@1: 68.7500 (68.7500)  Acc@5: 81.2500 (81.2500)  time: 0.5836  data: 0.3611  max mem: 2503
+Test: [Task 2]  [ 10/625]  eta: 0:02:35  Loss: 2.0180 (2.0022)  Acc@1: 50.0000 (49.4318)  Acc@5: 87.5000 (87.5000)  time: 0.2522  data: 0.0332  max mem: 2503
+Test: [Task 2]  [ 20/625]  eta: 0:02:26  Loss: 1.9839 (1.9468)  Acc@1: 50.0000 (52.0833)  Acc@5: 87.5000 (90.1786)  time: 0.2245  data: 0.0007  max mem: 2503
+Test: [Task 2]  [ 30/625]  eta: 0:02:22  Loss: 1.9123 (1.9446)  Acc@1: 56.2500 (53.2258)  Acc@5: 93.7500 (90.7258)  time: 0.2321  data: 0.0009  max mem: 2503
+Test: [Task 2]  [ 40/625]  eta: 0:02:20  Loss: 2.0363 (1.9753)  Acc@1: 50.0000 (52.4390)  Acc@5: 93.7500 (91.6159)  time: 0.2397  data: 0.0007  max mem: 2503
+Test: [Task 2]  [ 50/625]  eta: 0:02:16  Loss: 2.0449 (1.9877)  Acc@1: 50.0000 (52.0833)  Acc@5: 93.7500 (90.9314)  time: 0.2325  data: 0.0013  max mem: 2503
+Test: [Task 2]  [ 60/625]  eta: 0:02:13  Loss: 2.0490 (1.9966)  Acc@1: 50.0000 (52.2541)  Acc@5: 87.5000 (90.4713)  time: 0.2248  data: 0.0012  max mem: 2503
+Test: [Task 2]  [ 70/625]  eta: 0:02:10  Loss: 1.9424 (1.9847)  Acc@1: 50.0000 (52.1127)  Acc@5: 93.7500 (91.0211)  time: 0.2312  data: 0.0004  max mem: 2503
+Test: [Task 2]  [ 80/625]  eta: 0:02:09  Loss: 1.9731 (1.9929)  Acc@1: 50.0000 (51.6204)  Acc@5: 87.5000 (90.2778)  time: 0.2413  data: 0.0006  max mem: 2503
+Test: [Task 2]  [ 90/625]  eta: 0:02:06  Loss: 2.0590 (1.9977)  Acc@1: 43.7500 (51.0989)  Acc@5: 87.5000 (90.0412)  time: 0.2429  data: 0.0007  max mem: 2503
+Test: [Task 2]  [100/625]  eta: 0:02:03  Loss: 2.0254 (2.0027)  Acc@1: 50.0000 (51.5470)  Acc@5: 87.5000 (89.8515)  time: 0.2293  data: 0.0011  max mem: 2503
+Test: [Task 2]  [110/625]  eta: 0:02:00  Loss: 1.9659 (1.9948)  Acc@1: 56.2500 (51.9144)  Acc@5: 87.5000 (90.0338)  time: 0.2263  data: 0.0011  max mem: 2503
+Test: [Task 2]  [120/625]  eta: 0:01:58  Loss: 1.8753 (1.9901)  Acc@1: 56.2500 (52.2727)  Acc@5: 93.7500 (90.2376)  time: 0.2367  data: 0.0003  max mem: 2503
+Test: [Task 2]  [130/625]  eta: 0:01:56  Loss: 2.0229 (1.9957)  Acc@1: 50.0000 (51.9561)  Acc@5: 93.7500 (90.1718)  time: 0.2431  data: 0.0006  max mem: 2503
+Test: [Task 2]  [140/625]  eta: 0:01:54  Loss: 2.0229 (1.9949)  Acc@1: 50.0000 (51.8617)  Acc@5: 93.7500 (90.3812)  time: 0.2421  data: 0.0009  max mem: 2503
+Test: [Task 2]  [150/625]  eta: 0:01:51  Loss: 2.0178 (1.9984)  Acc@1: 50.0000 (52.0281)  Acc@5: 93.7500 (90.1904)  time: 0.2315  data: 0.0007  max mem: 2503
+Test: [Task 2]  [160/625]  eta: 0:01:49  Loss: 1.9922 (2.0008)  Acc@1: 50.0000 (51.8634)  Acc@5: 87.5000 (90.2174)  time: 0.2288  data: 0.0004  max mem: 2503
+Test: [Task 2]  [170/625]  eta: 0:01:47  Loss: 2.0557 (2.0041)  Acc@1: 50.0000 (51.9737)  Acc@5: 87.5000 (89.9488)  time: 0.2402  data: 0.0004  max mem: 2503
+Test: [Task 2]  [180/625]  eta: 0:01:45  Loss: 2.0557 (2.0070)  Acc@1: 50.0000 (51.8646)  Acc@5: 87.5000 (89.9517)  time: 0.2391  data: 0.0007  max mem: 2503
+Test: [Task 2]  [190/625]  eta: 0:01:42  Loss: 2.0532 (2.0098)  Acc@1: 50.0000 (51.7343)  Acc@5: 87.5000 (89.9215)  time: 0.2287  data: 0.0007  max mem: 2503
+* Acc@1 51.719 Acc@5 89.906 loss 2.017
+Test: [Task 3]  [  0/625]  eta: 0:05:31  Loss: 1.2291 (1.2291)  Acc@1: 93.7500 (93.7500)  Acc@5: 100.0000 (100.0000)  time: 0.5303  data: 0.2949  max mem: 2503
+Test: [Task 3]  [ 10/625]  eta: 0:02:48  Loss: 1.3368 (1.3557)  Acc@1: 93.7500 (90.9091)  Acc@5: 100.0000 (97.1591)  time: 0.2738  data: 0.0276  max mem: 2503
+Test: [Task 3]  [ 20/625]  eta: 0:02:37  Loss: 1.2826 (1.3069)  Acc@1: 93.7500 (91.6667)  Acc@5: 100.0000 (97.3214)  time: 0.2464  data: 0.0007  max mem: 2503
+Test: [Task 3]  [ 30/625]  eta: 0:02:27  Loss: 1.2156 (1.2789)  Acc@1: 93.7500 (92.1371)  Acc@5: 100.0000 (98.1855)  time: 0.2340  data: 0.0017  max mem: 2503
+Test: [Task 3]  [ 40/625]  eta: 0:02:23  Loss: 1.1524 (1.2594)  Acc@1: 93.7500 (92.0732)  Acc@5: 100.0000 (97.8659)  time: 0.2286  data: 0.0018  max mem: 2503
+Test: [Task 3]  [ 50/625]  eta: 0:02:20  Loss: 1.2108 (1.2488)  Acc@1: 87.5000 (91.6667)  Acc@5: 100.0000 (97.7941)  time: 0.2372  data: 0.0006  max mem: 2503
+Test: [Task 3]  [ 60/625]  eta: 0:02:18  Loss: 1.2187 (1.2417)  Acc@1: 93.7500 (91.9057)  Acc@5: 100.0000 (97.9508)  time: 0.2447  data: 0.0018  max mem: 2503
+Test: [Task 3]  [ 70/625]  eta: 0:02:14  Loss: 1.1204 (1.2238)  Acc@1: 93.7500 (91.9894)  Acc@5: 100.0000 (98.0634)  time: 0.2391  data: 0.0023  max mem: 2503
+Test: [Task 3]  [ 80/625]  eta: 0:02:10  Loss: 1.1686 (1.2236)  Acc@1: 87.5000 (91.6667)  Acc@5: 100.0000 (97.9938)  time: 0.2266  data: 0.0009  max mem: 2503
+Test: [Task 3]  [ 90/625]  eta: 0:02:08  Loss: 1.1874 (1.2153)  Acc@1: 87.5000 (91.7582)  Acc@5: 100.0000 (97.8022)  time: 0.2302  data: 0.0004  max mem: 2503
+Test: [Task 3]  [100/625]  eta: 0:02:06  Loss: 1.1406 (1.2107)  Acc@1: 93.7500 (91.8317)  Acc@5: 100.0000 (97.8342)  time: 0.2437  data: 0.0004  max mem: 2503
+Test: [Task 3]  [110/625]  eta: 0:02:03  Loss: 1.1406 (1.2048)  Acc@1: 93.7500 (92.2860)  Acc@5: 100.0000 (98.0293)  time: 0.2363  data: 0.0009  max mem: 2503
+Test: [Task 3]  [120/625]  eta: 0:02:00  Loss: 1.1493 (1.2067)  Acc@1: 93.7500 (92.3037)  Acc@5: 100.0000 (97.9855)  time: 0.2227  data: 0.0008  max mem: 2503
+Test: [Task 3]  [130/625]  eta: 0:01:57  Loss: 1.1493 (1.2093)  Acc@1: 93.7500 (92.2233)  Acc@5: 100.0000 (97.9962)  time: 0.2297  data: 0.0005  max mem: 2503
+Test: [Task 3]  [140/625]  eta: 0:01:55  Loss: 1.1864 (1.2143)  Acc@1: 87.5000 (92.0656)  Acc@5: 100.0000 (97.8280)  time: 0.2433  data: 0.0005  max mem: 2503
+Test: [Task 3]  [150/625]  eta: 0:01:53  Loss: 1.2245 (1.2207)  Acc@1: 87.5000 (91.7219)  Acc@5: 93.7500 (97.5579)  time: 0.2401  data: 0.0004  max mem: 2503
+Test: [Task 3]  [160/625]  eta: 0:01:50  Loss: 1.3717 (1.2301)  Acc@1: 87.5000 (91.6537)  Acc@5: 93.7500 (97.4767)  time: 0.2285  data: 0.0005  max mem: 2503
+Test: [Task 3]  [170/625]  eta: 0:01:47  Loss: 1.1954 (1.2273)  Acc@1: 93.7500 (91.6667)  Acc@5: 100.0000 (97.5512)  time: 0.2272  data: 0.0007  max mem: 2503
+Test: [Task 3]  [180/625]  eta: 0:01:45  Loss: 1.1954 (1.2271)  Acc@1: 93.7500 (91.7818)  Acc@5: 100.0000 (97.5138)  time: 0.2302  data: 0.0006  max mem: 2503
+Test: [Task 3]  [190/625]  eta: 0:01:43  Loss: 1.2172 (1.2246)  Acc@1: 93.7500 (91.9175)  Acc@5: 100.0000 (97.5458)  time: 0.2392  data: 0.0007  max mem: 2503
+* Acc@1 91.844 Acc@5 97.531 loss 1.224
+Test: [Task 4]  [ 0/29]  eta: 0:00:18  Loss: 2.0598 (2.0598)  Acc@1: 75.0000 (75.0000)  Acc@5: 93.7500 (93.7500)  time: 0.6354  data: 0.4158  max mem: 2503
+Test: [Task 4]  [10/29]  eta: 0:00:04  Loss: 2.3276 (2.3304)  Acc@1: 56.2500 (60.7955)  Acc@5: 75.0000 (75.0000)  time: 0.2555  data: 0.0383  max mem: 2503
+Test: [Task 4]  [20/29]  eta: 0:00:02  Loss: 2.2962 (2.2241)  Acc@1: 68.7500 (63.6905)  Acc@5: 75.0000 (77.3810)  time: 0.2250  data: 0.0006  max mem: 2503
+Test: [Task 4]  [28/29]  eta: 0:00:00  Loss: 2.1507 (2.2086)  Acc@1: 62.5000 (58.8235)  Acc@5: 75.0000 (76.6885)  time: 0.2286  data: 0.0005  max mem: 2503
+Test: [Task 4] Total time: 0:00:07 (0.2435 s / it)
+* Acc@1 58.824 Acc@5 76.688 loss 2.209
+Test: [Task 5]  [  0/625]  eta: 0:07:00  Loss: 1.0935 (1.0935)  Acc@1: 81.2500 (81.2500)  Acc@5: 100.0000 (100.0000)  time: 0.6728  data: 0.3724  max mem: 2503
+Test: [Task 5]  [ 10/625]  eta: 0:02:44  Loss: 1.3946 (1.3424)  Acc@1: 81.2500 (78.4091)  Acc@5: 100.0000 (97.7273)  time: 0.2668  data: 0.0341  max mem: 2503
+Test: [Task 5]  [ 20/625]  eta: 0:02:29  Loss: 1.3339 (1.3316)  Acc@1: 81.2500 (80.0595)  Acc@5: 100.0000 (97.9167)  time: 0.2254  data: 0.0010  max mem: 2503
+Test: [Task 5]  [ 30/625]  eta: 0:02:24  Loss: 1.3730 (1.3737)  Acc@1: 81.2500 (80.4435)  Acc@5: 100.0000 (98.1855)  time: 0.2300  data: 0.0011  max mem: 2503
+Test: [Task 5]  [ 40/625]  eta: 0:02:23  Loss: 1.4126 (1.3830)  Acc@1: 81.2500 (80.0305)  Acc@5: 100.0000 (97.7134)  time: 0.2433  data: 0.0005  max mem: 2503
+Test: [Task 5]  [ 50/625]  eta: 0:02:20  Loss: 1.4310 (1.4083)  Acc@1: 81.2500 (80.0245)  Acc@5: 93.7500 (97.3039)  time: 0.2465  data: 0.0017  max mem: 2503
+Test: [Task 5]  [ 60/625]  eta: 0:02:15  Loss: 1.4166 (1.3961)  Acc@1: 81.2500 (80.0205)  Acc@5: 100.0000 (97.3361)  time: 0.2306  data: 0.0017  max mem: 2503
+Test: [Task 5]  [ 70/625]  eta: 0:02:12  Loss: 1.3843 (1.3946)  Acc@1: 81.2500 (80.1937)  Acc@5: 100.0000 (97.1831)  time: 0.2253  data: 0.0010  max mem: 2503
+Test: [Task 5]  [ 80/625]  eta: 0:02:09  Loss: 1.4250 (1.4082)  Acc@1: 81.2500 (79.7068)  Acc@5: 100.0000 (97.2222)  time: 0.2325  data: 0.0009  max mem: 2503
+Test: [Task 5]  [ 90/625]  eta: 0:02:08  Loss: 1.4072 (1.3953)  Acc@1: 75.0000 (79.4643)  Acc@5: 100.0000 (97.2527)  time: 0.2410  data: 0.0005  max mem: 2503
+Test: [Task 5]  [100/625]  eta: 0:02:06  Loss: 1.4072 (1.3989)  Acc@1: 81.2500 (79.1460)  Acc@5: 100.0000 (97.2772)  time: 0.2478  data: 0.0012  max mem: 2503
+Test: [Task 5]  [110/625]  eta: 0:02:02  Loss: 1.5003 (1.4038)  Acc@1: 75.0000 (78.7725)  Acc@5: 100.0000 (97.4099)  time: 0.2349  data: 0.0011  max mem: 2503
+Test: [Task 5]  [120/625]  eta: 0:01:59  Loss: 1.3121 (1.3966)  Acc@1: 81.2500 (79.2355)  Acc@5: 100.0000 (97.5207)  time: 0.2236  data: 0.0004  max mem: 2503
+Test: [Task 5]  [130/625]  eta: 0:01:57  Loss: 1.3539 (1.3981)  Acc@1: 81.2500 (79.0076)  Acc@5: 100.0000 (97.5668)  time: 0.2293  data: 0.0003  max mem: 2503
+Test: [Task 5]  [140/625]  eta: 0:01:55  Loss: 1.3136 (1.3916)  Acc@1: 81.2500 (79.4770)  Acc@5: 100.0000 (97.5621)  time: 0.2389  data: 0.0005  max mem: 2503
+Test: [Task 5]  [150/625]  eta: 0:01:52  Loss: 1.3136 (1.3943)  Acc@1: 81.2500 (79.3460)  Acc@5: 100.0000 (97.6407)  time: 0.2367  data: 0.0006  max mem: 2503
+Test: [Task 5]  [160/625]  eta: 0:01:49  Loss: 1.4365 (1.3980)  Acc@1: 75.0000 (79.1537)  Acc@5: 100.0000 (97.5155)  time: 0.2271  data: 0.0008  max mem: 2503
+Test: [Task 5]  [170/625]  eta: 0:01:47  Loss: 1.4404 (1.4012)  Acc@1: 75.0000 (79.0205)  Acc@5: 100.0000 (97.5512)  time: 0.2309  data: 0.0008  max mem: 2503
+Test: [Task 5]  [180/625]  eta: 0:01:45  Loss: 1.3950 (1.3998)  Acc@1: 81.2500 (79.2127)  Acc@5: 100.0000 (97.4448)  time: 0.2418  data: 0.0010  max mem: 2503
+Test: [Task 5]  [190/625]  eta: 0:01:43  Loss: 1.3950 (1.4085)  Acc@1: 81.2500 (79.1230)  Acc@5: 93.7500 (97.2840)  time: 0.2515  data: 0.0021  max mem: 2503
+* Acc@1 79.125 Acc@5 97.250 loss 1.406
+{0: {0: 96, 1: 2640, 2: 224, 3: 16, 4: 0, 5: 2496, 6: 16, 7: 0, 8: 1392, 9: 3200, 10: 560, 11: 1664, 12: 80, 13: 96, 14: 32, 15: 96, 16: 64, 17: 16, 18: 16, 19: 96}, 1: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 3200, 13: 3200, 14: 3200, 15: 3200, 16: 0, 17: 0, 18: 0, 19: 0}, 2: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 3200, 9: 3200, 10: 3200, 11: 3200, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0}, 3: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 459, 13: 459, 14: 459, 15: 459, 16: 0, 17: 0, 18: 0, 19: 0}, 4: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 3200, 17: 3200, 18: 3200, 19: 3200}}
+[Average accuracy till task5]	Acc@1: 60.2647	Acc@5: 80.7002	Loss: 2.0408	Forgetting: 12.5770	Backward: -12.5770
+Total training time: 0:26:38
